@@ -38,9 +38,58 @@ Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
 
 ( ) NÃO
 
-# DESENVOLVER AQUI
+### Guia de Configuração do Ambiente
 
-Se SIM, insira um manual (ou um script) para auxiliar ainda mais os interessados na execução.
+1. **Clonar o repositório**
+
+Abra o terminal ou prompt de comando e clone o repositório usando o seguinte comando:
+
+`````shell
+git clone https://github.com/joaoseisei/Logic-Thinkering.git
+`````
+
+2. **Abrir o Projeto com a IDE IntelliJ**
+
+É recomendável abrir o projeto clonado na IDE **IntelliJ IDEA**. Para isso, siga os passos abaixo:
+
+- Abra o **IntelliJ IDEA**.
+- Selecione a opção **Open** no menu inicial.
+- Navegue até a pasta onde o projeto foi clonado e selecione-a para abrir.
+
+**Importante**: Certifique-se de que a versão do **Java 19** ou superior esteja instalada e configurada na sua IDE para garantir que o projeto seja compilado corretamente.
+
+
+* No Windows:
+`````shell
+gradlew.bat build
+`````
+
+* No Linux:
+`````shell
+./gradlew build
+`````
+
+4. **Executar as tarefas do Gradle**
+
+Dentro do Gradle, siga os seguintes passos:
+
+* Acese **Tasks** > **fabric** 
+* Clique duas vezes nos programas listados (execute de cima para baixo).
+
+<center>
+
+![Gradle](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/tutorialImg1.png)
+
+</center>
+
+5. **Entrar no Jogo**
+
+Após concluir os passos anteriores, o jogo será iniciado normalmente. Agora, siga estas etapas para carregar o mod:
+
+- **Criar um novo mundo**: No menu principal do jogo, escolha a opção para **Criar Novo Mundo**.
+- O mod será carregado automaticamente e estará disponível para ser utilizado no novo mundo.
+
+Pronto! Agora você pode aproveitar as funcionalidades do mod dentro do seu jogo.
 
 ## Informações Complementares 
 Quaisquer outras informações adicionais podem ser descritas nessa seção.
