@@ -26,7 +26,7 @@ O principal objetivo dos padrões de projeto criacionais é fornecer soluções 
 
 No projeto, a aplicação desses padrões busca não apenas facilitar a criação de objetos, mas também promover boas práticas de design, como baixo acoplamento e alta coesão, princípios fundamentais para a manutenção e evolução do código. Por exemplo, ao utilizar o padrão Factory Method, a equipe pode garantir que novos tipos de objetos sejam integrados ao sistema sem alterações significativas na lógica existente, minimizando riscos e esforço.
 
-Para a equipe, a adoção de padrões criacionais auxilia na padronização de práticas de desenvolvimento, promovendo um entendimento comum sobre como os objetos devem ser gerados e utilizados no projeto. Isso não só facilita a colaboração entre os membros da equipe, como também melhora a clareza do código, tornando-o mais legível e compreensível.
+  Para a equipe, a adoção de padrões criacionais auxilia na padronização de práticas de desenvolvimento, promovendo um entendimento comum sobre como os objetos devem ser gerados e utilizados no projeto. Isso não só facilita a colaboração entre os membros da equipe, como também melhora a clareza do código, tornando-o mais legível e compreensível.
 </div>
 
 ## Metodologia
