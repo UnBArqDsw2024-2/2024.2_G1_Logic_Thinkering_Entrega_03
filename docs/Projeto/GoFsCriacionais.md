@@ -26,7 +26,7 @@ O principal objetivo dos padrões de projeto criacionais é fornecer soluções 
 
 No projeto, a aplicação desses padrões busca não apenas facilitar a criação de objetos, mas também promover boas práticas de design, como baixo acoplamento e alta coesão, princípios fundamentais para a manutenção e evolução do código. Por exemplo, ao utilizar o padrão Factory Method, a equipe pode garantir que novos tipos de objetos sejam integrados ao sistema sem alterações significativas na lógica existente, minimizando riscos e esforço.
 
-  Para a equipe, a adoção de padrões criacionais auxilia na padronização de práticas de desenvolvimento, promovendo um entendimento comum sobre como os objetos devem ser gerados e utilizados no projeto. Isso não só facilita a colaboração entre os membros da equipe, como também melhora a clareza do código, tornando-o mais legível e compreensível.
+Para a equipe, a adoção de padrões criacionais auxilia na padronização de práticas de desenvolvimento, promovendo um entendimento comum sobre como os objetos devem ser gerados e utilizados no projeto. Isso não só facilita a colaboração entre os membros da equipe, como também melhora a clareza do código, tornando-o mais legível e compreensível.
 </div>
 
 ## Metodologia
@@ -51,7 +51,8 @@ O Factory Method é aplicado na criação de novos tipos de blocos, permitindo f
 -->
 
 <div align="justify">&emsp;&emsp;
-Portant, Os padrões de projeto criacionais desempenharam um papel fundamental na criação de objetos de forma eficiente e flexível. A implementação de padrões como Factory Method, Builder, Abstract Factory e Prototype trouxe organização ao código e reduziu a complexidade de expandir funcionalidades, como a criação de novos blocos, itens e estruturas de rede redstone.
+Portanto, Os padrões de projeto criacionais desempenharam um papel fundamental na criação de objetos de forma eficiente e flexível. A implementação de padrões como Factory Method, Builder, Abstract Factory e Prototype trouxe organização ao código e reduziu a complexidade de expandir funcionalidades, como a criação de novos blocos, itens e estruturas de rede redstone.
+
 
 Os objetivos do projeto foram alcançados com sucesso, resultando em um código mais modular e reutilizável, além de facilitar a manutenção e futuras expansões do mod. Essa abordagem também permitiu melhor alinhamento com a arquitetura original do Minecraft, preservando a integração e a compatibilidade com o jogo base.
 </div>
