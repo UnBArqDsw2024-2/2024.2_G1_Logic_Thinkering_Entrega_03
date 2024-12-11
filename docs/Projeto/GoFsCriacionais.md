@@ -51,7 +51,7 @@ O Factory Method é aplicado na criação de novos tipos de blocos, permitindo f
 -->
 
 <div align="justify">&emsp;&emsp;
-Portanto, Os padrões de projeto criacionais desempenharam um papel fundamental na criação de objetos de forma eficiente e flexível. A implementação de padrões como Factory Method, Builder, Abstract Factory e Prototype trouxe organização ao código e reduziu a complexidade de expandir funcionalidades, como a criação de novos blocos, itens e estruturas de rede redstone.</br>
+Portanto, Os padrões de projeto criacionais desempenharam um papel fundamental na criação de objetos de forma eficiente e flexível. A implementação de padrões como Factory Method, Builder, Abstract Factory e Prototype trouxe organização ao código e reduziu a complexidade de expandir funcionalidades, como a criação de novos blocos, itens e estruturas de rede redstone.
 
 Os objetivos do projeto foram alcançados com sucesso, resultando em um código mais modular e reutilizável, além de facilitar a manutenção e futuras expansões do mod. Essa abordagem também permitiu melhor alinhamento com a arquitetura original do Minecraft, preservando a integração e a compatibilidade com o jogo base.
 </div>
