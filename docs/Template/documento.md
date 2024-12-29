@@ -247,7 +247,7 @@ Figura x - Prototype
 </center>
 
 Figura x - Barra do criativo com os itens adicionados
-![Versao 1.1](../assets/BPMN/criacional.png)
+![Versao 1.1](../assets/criacional.png)
  <center>
  <b>Fonte:</b> Sandes, 2024.
 </center>
