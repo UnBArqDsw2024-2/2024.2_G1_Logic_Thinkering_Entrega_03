@@ -11,6 +11,7 @@ O objetivo do protótipo é reutilizar atributos já configurados, minimizando o
 </div>
 
 <center>
+Figura 1 - Resumo Prototype
 
 ![resumo](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/prototyperesumo.png)
 
@@ -242,71 +243,26 @@ public class ConcreteTool implements PrototypeItem {
 }
 ```
 
-
-Figura x - Prototype
-![Versao 1.1](../assets/createiveMenu.png)
  <center>
- <b>Fonte:</b> Sandes, 2024.
+Figura 2 - Prototype
+
+![resumo](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/creativeMenu.png)
+
+ <b>Fonte:</b> Carvalho, Sandes, 2024.
 </center>
 
-Figura x - Barra do criativo com os itens adicionados
-![Versao 1.1](../assets/prototype.png)
  <center>
- <b>Fonte:</b> Sandes, 2024.
+Figura 3 - Barra do criativo com os itens adicionados
+
+![resumo](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/prototype.png)
+
+ <b>Fonte:</b> Carvalho, Sandes, 2024.
 </center>
 
 <div align="justify">&emsp;&emsp;
 O diagrama apresentado descreve a estrutura de classes e os relacionamentos utilizados no desenvolvimento do mod, focando na criação dos itens personalizados. A implementação segue o padrão de projeto Prototype, evidenciado pela interface PrototypeItem, que define os métodos clone() e updateItem(), permitindo a reutilização e modificação de objetos. As classes concretas ConcreteItem, ConcreteArmor e ConcreteTool implementam a interface, especializando os comportamentos, bem como as funcionalidades de cada tipo de item. 
 </div>
 
-### Versões Anteriores
-
-<details>
-<summary>Visualizar versão 1.2</summary>
-
-### Versão 1.2
-
-<!-- Aqui documente as mudanças de uma versão para a outra -->
-
-A Figura 1 apresenta não só o BPMN revisado como também alguns materiais utilizados durante sua confecção.
-
-<center><b>Figura 1 -</b> BPMN revisado versão 1.2</center>
-
-![Versao 1.2](../assets/BPMN/bpmn2.png)
-
-<center><b>Fonte:</b> Lemos, 2024.</center>
-
-</details>
-
-<details>
-<summary>Visualizar versão 1.1</summary>
-
-### Versão 1.1
-
-A Figura 2 apresenta não só o BPMN revisado como também alguns materiais utilizados durante sua confecção.
-
-<center><b>Figura 2 -</b> BPMN revisado versão 1.1</center>
-
-![Versao 1.1](../assets/BPMN/bpmnRevisado.jpg)
-
-<center><b>Fonte:</b> Silva, Lemos, Sandes, Carvalho, 2024.</center>
-
-</details>
-
-<details>
-<summary>Visualizar versão 1.0</summary>
-
-### Versão 1.0
-
-Primeira adaptação ao Bizagi pode ser vista na Figura 3.
-
-<center><b>Figura 3 -</b> BPMN adaptado ao Bizagi versão 1.0</center>
-
-![Versão 1.0](../assets/BPMN/BPMN.png)
-
-<center><b>Fonte:</b> Bartz, Rodrigues, Reis, Sandes, Lemos,  Carvalho, Silva, Santos, Alves, Santos, 2024.</center>
-
-</details>
 
 ## Conclusão
 
@@ -315,6 +271,14 @@ Primeira adaptação ao Bizagi pode ser vista na Figura 3.
 -   **Avalie se os objetivos foram alcançados e o impacto do trabalho.**
 -   **Apresente perspectivas para melhorias ou trabalhos futuros.**
 -->
+
+<div align="justify">&emsp;&emsp;
+Com o uso do padrão Prototype, foi possível otimizar a criação de itens no mod, garantindo eficiência e redução de custos relacionados 
+à criação de instâncias repetitivas. Essa abordagem destacou-se como uma solução prática para os desafios enfrentados, 
+contribuindo para a organização e manutenção do código. Entretanto, vale resaltar que foi realizado uma cópia profunda pra garantir
+que o objeto clonado nao compartilhe referências com o protótipo, sendo assim o custo para clonagem se iguala ao custo de criar uma 
+nova instância.
+</div>
 
 ## Bibliografia
 
@@ -358,7 +322,7 @@ Primeira adaptação ao Bizagi pode ser vista na Figura 3.
 <div style="margin: 0 auto; width: fit-content;">
 
 | Versão | Data da alteração |      Alteração       |                                                                           Responsável                                                                           | Revisor | Data de revisão |
-| :----: |:-----------------:| :------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: | :-------------: |
+|:------:|:-----------------:| :------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: | :-------------: |
 |  1.0   |       28/12       | Criação do documento | [Eduardo Sandes](https://github.com/DiceRunner714), [Gabriela Lemos](https://github.com/heylisten64), [João Antonio G. Carvalho](https://github.com/joaoseisei) |         |                 |
 
 </div>
