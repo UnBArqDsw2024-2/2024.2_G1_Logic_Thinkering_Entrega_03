@@ -1,0 +1,151 @@
+# Prototype - Item
+
+## Introdução
+<div align="justify">&emsp;&emsp;
+Este documento apresenta o protótipo de itens do mod, representando a criação de todos os itens utilizados. A abordagem descrita visa otimizar a reutilização de recursos e atributos previamente configurados.
+</div>
+
+## Objetivo
+<div align="justify">&emsp;&emsp;
+O objetivo do protótipo é reutilizar atributos já configurados, minimizando o custo de criação de novas instâncias. Essa abordagem é particularmente útil em jogos, onde temos instâncias semelhantes, mas não idênticas, permitindo realizar um clone e modificar apenas os atributos necessários. No caso dos itens, essa técnica foi aplicada para reduzir o custo de criar novos itens repetidamente.
+</div>
+
+<center>
+
+![resumo](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/prototyperesumo.png)
+
+<center><b>Fonte:</b> Carvalho, 2024.</center>
+</center>
+
+## Metodologia
+<div align="justify">&emsp;&emsp;
+Após dividir as responsabilidades de cada subgrupo, analisamos todas as metodologias sugeridas pela professora Milene no Aprender 3. 
+Identificamos que o padrão de projeto Prototype seria ideal para o código, uma vez que ele reduz a criação excessiva de instâncias, 
+um problema enfrentado no módulo 2. Após selecionar o padrão GoF adequado, testamos o código, ajustando-o aos padrões de arquitetura. 
+Após validar o funcionamento correto e alinhado ao padrão, elaboramos o diagrama UML correspondente no Draw.io.
+</div>
+
+
+## Resultados
+
+<!--
+- **Apresente o produto final, como o diagrama ou solução desenvolvida.**
+- **Desenvolva ao menos um parágrafo referenciando a figura**
+- **Adicione "Figura 1 - Título da Figura/Quadro/Tabela" acima e "Fonte: " abaixo dela**
+- Destaque os pontos principais ou insights obtidos durante o processo.
+- **APRESENTE AS VERSÕES DO DIAGRAMA!! Podem usar o formato abaixo para poluir menos a página**
+-->
+
+<div align="justify">&emsp;&emsp;
+COLOCAR O TEXTO AQUI DENTRO
+</div>
+
+### Versões Anteriores
+
+<details>
+<summary>Visualizar versão 1.2</summary>
+
+### Versão 1.2
+
+<!-- Aqui documente as mudanças de uma versão para a outra -->
+
+A Figura 1 apresenta não só o BPMN revisado como também alguns materiais utilizados durante sua confecção.
+
+<center><b>Figura 1 -</b> BPMN revisado versão 1.2</center>
+
+![Versao 1.2](../assets/BPMN/bpmn2.png)
+
+<center><b>Fonte:</b> Lemos, 2024.</center>
+
+</details>
+
+<details>
+<summary>Visualizar versão 1.1</summary>
+
+### Versão 1.1
+
+A Figura 2 apresenta não só o BPMN revisado como também alguns materiais utilizados durante sua confecção.
+
+<center><b>Figura 2 -</b> BPMN revisado versão 1.1</center>
+
+![Versao 1.1](../assets/BPMN/bpmnRevisado.jpg)
+
+<center><b>Fonte:</b> Silva, Lemos, Sandes, Carvalho, 2024.</center>
+
+</details>
+
+<details>
+<summary>Visualizar versão 1.0</summary>
+
+### Versão 1.0
+
+Primeira adaptação ao Bizagi pode ser vista na Figura 3.
+
+<center><b>Figura 3 -</b> BPMN adaptado ao Bizagi versão 1.0</center>
+
+![Versão 1.0](../assets/BPMN/BPMN.png)
+
+<center><b>Fonte:</b> Bartz, Rodrigues, Reis, Sandes, Lemos,  Carvalho, Silva, Santos, Alves, Santos, 2024.</center>
+
+</details>
+
+## Conclusão
+
+<!--
+-   **Resuma os pontos principais do trabalho.**
+-   **Avalie se os objetivos foram alcançados e o impacto do trabalho.**
+-   **Apresente perspectivas para melhorias ou trabalhos futuros.**
+-->
+
+## Bibliografia
+
+<!-- - **Altere!**-->
+
+> [1] SERRANO, Milene. Videoaula: [08d - Vídeo-Aula - DSW - GoFs - Criacionais - Demais Padrões - Visão Rápida](https://unbbr-my.sharepoint.com/:v:/g/personal/mileneserrano_unb_br/EdG2MN8pFrJOpSMnzcCDJFkB2FCnvQlUOuGUs6ehjZYv6A?e=yl3dpY). [Online]. Disponível em: [https://unbbr-my.sharepoint.com/:v:/g/personal/mileneserrano_unb_br/EdG2MN8pFrJOpSMnzcCDJFkB2FCnvQlUOuGUs6ehjZYv6A?e=yl3dpY](https://unbbr-my.sharepoint.com/:v:/g/personal/mileneserrano_unb_br/EdG2MN8pFrJOpSMnzcCDJFkB2FCnvQlUOuGUs6ehjZYv6A?e=yl3dpY) . Acesso em: 28 dez. 2024.
+
+> [2] MIRANDA, Ótavio. Videoaula: [Prototype Teoria - Padrões de Projeto - Parte 8/45](https://youtu.be/Z-_smcjkdwM?si=acuF2pyFHgE5ewok). [Online]. Disponível em: [https://youtu.be/Z-_smcjkdwM?si=acuF2pyFHgE5ewok](https://youtu.be/Z-_smcjkdwM?si=acuF2pyFHgE5ewok) . Acesso em: 27 dez. 2024.
+
+> [3] BANAS, derek. Videoaula: [Prototype Design Pattern Tutorial](https://youtu.be/AFbZhRL0Uz8?si=Ummno3Obz_fIImEX). [Online]. Disponível em: [https://youtu.be/AFbZhRL0Uz8?si=Ummno3Obz_fIImEX](https://youtu.be/AFbZhRL0Uz8?si=Ummno3Obz_fIImEX) . Acesso em: 27 dez. 2024.
+
+<center>
+
+## Participantes
+
+</center>
+
+<!-- de preferência: em ordem alfabética, seguindo o exemplo: -->
+
+<div style="margin: 0 auto; width: fit-content;">
+
+| Matrícula | Aluno                             | Git                                               |
+| --------- | --------------------------------- | ------------------------------------------------- |
+| 221008024 | Eduardo Matheus dos Santos Sandes | [DiceRunner714](https://github.com/DiceRunner714) |
+| 170010872 | Gabriela de Oliveira Lemos        | [heylisten64](https://github.com/heylisten64)     |
+| 221008150 | João Antonio Ginuino Carvalho     | [joaoseisei](https://github.com/joaoseisei)       |
+
+</div>
+
+---
+
+<center>
+
+## Histórico de Versão
+
+</center>
+
+<!-- Lembre de alterar a data -->
+<!-- É PRA POR O NOME, NÃO O USER DO GITHUB -->
+
+<div style="margin: 0 auto; width: fit-content;">
+
+| Versão | Data da alteração |      Alteração       |                                                                           Responsável                                                                           | Revisor | Data de revisão |
+| :----: |:-----------------:| :------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: | :-------------: |
+|  1.0   |       28/12       | Criação do documento | [Eduardo Sandes](https://github.com/DiceRunner714), [Gabriela Lemos](https://github.com/heylisten64), [João Antonio G. Carvalho](https://github.com/joaoseisei) |         |                 |
+
+</div>
+
+## Controle de Revisão
+
+|                        Revisor(es)                        | O que foi realizado |
+| :-------------------------------------------------------: |:-------------------:|
+| |                     |
