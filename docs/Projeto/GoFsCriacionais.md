@@ -8,9 +8,12 @@
 - Mencione brevemente os principais aspectos que serão abordados no documento.
 -->
 
-<div align="justify">&emsp;&emsp;
+<div align="justify">
+
+&emsp;&emsp;
 Os padrões de projeto, conhecidos como GoFs, são soluções amplamente aceitas para problemas recorrentes no desenvolvimento de software. Dentre as categorias desses padrões, os padrões criacionais se destacam por abordar a complexidade envolvida na criação de objetos, oferecendo mecanismos que aumentam a flexibilidade e reutilização do código. Esses padrões são essenciais em contextos onde a instânciação direta de objetos pode gerar dependências rígidas, dificuldades de manutenção ou limitar a capacidade de extensão do sistema.
 
+&emsp;&emsp;
 Os padrões criacionais incluem abordagens como Factory Method, Abstract Factory, Builder e Prototype, cada um projetado para resolver desafios específicos relacionados à criação de objetos. Por exemplo, o padrão Builder facilita a construção de objetos complexos de forma controlada e passo a passo. Ao adotar esses padrões, podemos criar sistemas mais modulares e resilientes a mudanças, promovendo a separação de responsabilidades e a inversão de controle, princípios fundamentais no design de software moderno.
 </div>
 
@@ -21,11 +24,15 @@ Os padrões criacionais incluem abordagens como Factory Method, Abstract Factory
 - **Destaque os resultados esperados, como soluções para problemas, melhorias no entendimento ou suporte à tomada de decisões.**
 -->
 
-<div align="justify">&emsp;&emsp;
+<div align="justify">
+
+&emsp;&emsp;
 O principal objetivo dos padrões de projeto criacionais é fornecer soluções eficientes e reutilizáveis para o processo de criação de objetos no projeto. Esses padrões visam reduzir a rigidez, a complexidade e as dependências do código ao encapsular a lógica de instânciação e permitir maior flexibilidade na escolha das classes que serão utilizadas em diferentes cenários.
 
+&emsp;&emsp;
 No projeto, a aplicação desses padrões busca não apenas facilitar a criação de objetos, mas também promover boas práticas de design, como baixo acoplamento e alta coesão, princípios fundamentais para a manutenção e evolução do código. Por exemplo, ao utilizar o padrão Factory Method, a equipe pode garantir que novos tipos de objetos sejam integrados ao sistema sem alterações significativas na lógica existente, minimizando riscos e esforço.
 
+&emsp;&emsp;
 Para a equipe, a adoção de padrões criacionais auxilia na padronização de práticas de desenvolvimento, promovendo um entendimento comum sobre como os objetos devem ser gerados e utilizados no projeto. Isso não só facilita a colaboração entre os membros da equipe, como também melhora a clareza do código, tornando-o mais legível e compreensível.
 </div>
 
@@ -36,9 +43,12 @@ Para a equipe, a adoção de padrões criacionais auxilia na padronização de p
 - Se desejarem, podem citar os desafios encontrados seguindo a metodologia, propostas de melhoria, etc.
 -->
 
-<div align="justify">&emsp;&emsp;
+<div align="justify">
+
+&emsp;&emsp;
 No contexto do desenvolvimento do projeto, a aplicação dos padrões criacionais foi orientada para facilitar a criação de objetos complexos e modularizar o código. Foram estudados os padrões Factory Method, Abstract Factory, Builder e Prototype, aplicando-os conforme as necessidades específicas do projeto.
 
+&emsp;&emsp;
 O Factory Method é aplicado na criação de novos tipos de blocos, permitindo flexibilidade e expansão do sistema. O Builder é essencial para simplificar a construção de itens compostos, como armaduras e ferramentas reforçadas, enquanto o Abstract Factory é empregado na criação de famílias de objetos relacionados, como materiais e itens. O Prototype é usado para clonar robôs ou itens com configurações pré-definidas.
 </div>
 
@@ -53,8 +63,10 @@ O Factory Method é aplicado na criação de novos tipos de blocos, permitindo f
 <div align="justify">&emsp;&emsp;
 Portanto, Os padrões de projeto criacionais desempenharam um papel fundamental na criação de objetos de forma eficiente e flexível. A implementação de padrões como Factory Method, Builder, Abstract Factory e Prototype trouxe organização ao código e reduziu a complexidade de expandir funcionalidades, como a criação de novos blocos, itens e estruturas de rede redstone.
 
+&emsp;&emsp;
 Os objetivos do projeto foram alcançados com sucesso, resultando em um código mais modular e reutilizável, além de facilitar a manutenção e futuras expansões do mod. Essa abordagem também permitiu melhor alinhamento com a arquitetura original do Minecraft, preservando a integração e a compatibilidade com o jogo base.
 </div>
+
 ## Bibliografia 
 
 <!-- - **Altere!**-->
