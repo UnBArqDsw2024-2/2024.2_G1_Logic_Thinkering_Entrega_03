@@ -1,4 +1,4 @@
-# Strategy - Register
+# Strategy - Item
 
 ## Introdução
 <div align="justify">&emsp;&emsp;
@@ -9,14 +9,6 @@ Este documento apresenta o strategy usado para registrar os itens, ferramentas, 
 <div align="justify">&emsp;&emsp;
 O objetivo do strategy é permitir que um conjunto de algoritmos seja definido e encapsulado separadamente de forma que a escolha de qual será usado possa ser feita em tempo de execução. Resumidamente, o strategy promove a separação entre o comportamento de uma classe e a lógica que a implementa.
 </div>
-
-<!-- <center>
-Figura 1 - Resumo Prototype
-
-![resumo](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/prototyperesumo.png)
-
-<center><b>Fonte:</b> Carvalho, 2024.</center>
-</center> -->
 
 ## Metodologia
 <div align="justify">&emsp;&emsp;
@@ -169,16 +161,11 @@ public class ConcreteRegisterArmor implements StrategyRegister {
 }
 ```
 
-### Classe: ConcreteRegisterBlock
-```java
-a fazer
-```
-
 
 <center>
 Figura 1 - Strategy
 
-![resumo](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/strategyregister.jpeg)
+![v2](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/strategyregisterv2.png)
 
  <b>Fonte:</b> Carvalho, Sandes, 2025.
 </center>
@@ -198,6 +185,28 @@ O diagrama apresentado descreve a estrutura de classes e os relacionamentos util
 <div align="justify">&emsp;&emsp;
 Com a implementação do padrão Strategy, foi possível registrar diferentes tipos de objetos no mod de forma flexível e organizada, adaptando o comportamento de registro para atender às características específicas de itens, ferramentas, blocos e armaduras. Essa abordagem promoveu a separação de responsabilidades e facilitou a manutenção do código, permitindo alterações e expansões futuras sem impactar outras partes do sistema. Além disso, o uso do Strategy reduziu a complexidade no gerenciamento dos registros ao eliminar a necessidade de estruturas condicionais extensas oferecendo também maior facilidade de adicionar métodos de registros para outros tipos de objetos futuramente.
 </div>
+
+### Versões Anteriores
+
+<details>
+<summary>Visualizar versão 1.0</summary>
+
+### Versão 1.0
+
+<!-- Aqui documente as mudanças de uma versão para a outra -->
+
+A Figura 1 apresenta a versão 1.0 do UML de registro de itens.
+
+<center>
+Figura 1 - Strategy
+
+![v1](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/strategyregister.jpeg)
+
+<b>Fonte:</b> Carvalho, Sandes, 2025.
+</center>
+
+</details>
+
 
 ## Bibliografia
 
