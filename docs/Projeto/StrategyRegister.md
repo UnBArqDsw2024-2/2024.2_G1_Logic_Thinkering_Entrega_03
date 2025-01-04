@@ -2,7 +2,7 @@
 
 ## Introdução
 <div align="justify">&emsp;&emsp;
-Este documento apresenta o strategy usado para registrar os itens, ferramentas, blocos e armaduras do mod visando encapsular a escolha dos métodos usados para registrar cada item.
+Este documento apresenta o strategy usado para registrar os itens, ferramentas e armaduras do mod visando encapsular a escolha dos métodos usados para registrar cada item.
 </div>
 
 ## Objetivo
@@ -12,7 +12,7 @@ O objetivo do strategy é permitir que um conjunto de algoritmos seja definido e
 
 ## Metodologia
 <div align="justify">&emsp;&emsp;
-Durante a fase de implementação, notamos não só os itens, mas também as ferramentas, blocos e armaduras precisavam ser registrados no Minecraft. No entanto, cada tipo de item tem propriedades e comportamentos diferentes de modo que seria impossível registrar todos usando o mesmo método. Para resolver essa questão, adotamos o padrão Strategy, permitindo encapsular os comportamentos específicos de cada tipo de objeto em classes separadas.
+Durante a fase de implementação, notamos não só os itens, mas também as ferramentas e armaduras precisavam ser registrados no Minecraft. No entanto, cada tipo de item tem propriedades e comportamentos diferentes de modo que seria impossível registrar todos usando o mesmo método. Para resolver essa questão, adotamos o padrão Strategy, permitindo encapsular os comportamentos específicos de cada tipo de objeto em classes separadas.
 </div>
 
 ## Resultados
@@ -171,7 +171,7 @@ Figura 1 - Strategy
 </center>
 
 <div align="justify">&emsp;&emsp;
-O diagrama apresentado descreve a estrutura de classes e os relacionamentos utilizados para registro dos itens do mod. A implementação segue o padrão de projeto Strategy, evidenciado pela interface StrategyRegister, que define a assinatura dos métodos para registro register(String id) e register(String id, String material, String type). As classes concretas ConcreteRegisterItem, ConcreteRegisterArmor, ConcreteRegisterTool e ConcreteRegisterBlock implementam esses métodos de acordo com as características e necessidades de cada caso, permitindo adaptação em tempo de execução. 
+O diagrama apresentado descreve a estrutura de classes e os relacionamentos utilizados para registro dos itens do mod. A implementação segue o padrão de projeto Strategy, evidenciado pela interface StrategyRegister, que define a assinatura dos métodos para registro register(String id) e register(String id, String material, String type). As classes concretas ConcreteRegisterItem, ConcreteRegisterArmor e ConcreteRegisterTool implementam esses métodos de acordo com as características e necessidades de cada caso, permitindo adaptação em tempo de execução. 
 </div>
 
 ## Conclusão
@@ -183,7 +183,7 @@ O diagrama apresentado descreve a estrutura de classes e os relacionamentos util
 -->
 
 <div align="justify">&emsp;&emsp;
-Com a implementação do padrão Strategy, foi possível registrar diferentes tipos de objetos no mod de forma flexível e organizada, adaptando o comportamento de registro para atender às características específicas de itens, ferramentas, blocos e armaduras. Essa abordagem promoveu a separação de responsabilidades e facilitou a manutenção do código, permitindo alterações e expansões futuras sem impactar outras partes do sistema. Além disso, o uso do Strategy reduziu a complexidade no gerenciamento dos registros ao eliminar a necessidade de estruturas condicionais extensas oferecendo também maior facilidade de adicionar métodos de registros para outros tipos de objetos futuramente.
+Com a implementação do padrão Strategy, foi possível registrar diferentes tipos de objetos no mod de forma flexível e organizada, adaptando o comportamento de registro para atender às características específicas de itens, ferramentas e armaduras. Essa abordagem promoveu a separação de responsabilidades e facilitou a manutenção do código, permitindo alterações e expansões futuras sem impactar outras partes do sistema. Além disso, o uso do Strategy reduziu a complexidade no gerenciamento dos registros ao eliminar a necessidade de estruturas condicionais extensas oferecendo também maior facilidade de adicionar métodos de registros para outros tipos de objetos futuramente.
 </div>
 
 ### Versões Anteriores
