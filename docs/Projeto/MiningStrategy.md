@@ -271,6 +271,30 @@ Figura 1 - Strategy
  <b>Fonte:</b> Reis, Santos, 2025.
 </center>
 
+### Requisitos Elicitados
+<center> <b>Tabela 01</b> - Requisitos Elicitados no artefato <b>Brainstorming</b></center>
+
+| ID    | Descrição                                                                                                                         |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------- |
+| RF16  | Adicionar robôs de mineração                                                                                                      |
+| RF18  | Os robôs de mineração devem minerar somente o que o jogador configurar                                                            |
+| RNF02 | As novas mecânicas e blocos não devem impactar significativamente o desempenho do jogo, mesmo em servidores com muitos jogadores. |
+| RNF05 | Utilizar imagens, ícones e texturas objetivas.                                                                                    |
+
+<!-- no caso da entrega 02-->
+
+### Requisitos Modelados
+<center> <b>Tabela 01</b> - Requisitos Modelados no artefato <b>Diagrama de Classes</b></center>
+
+| ID    | Descrição                                                                                                                        | Origem                                                                                                                      |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| RF16  | Adicionar robôs de mineração                                                                                                     | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+| RF18  | Os robôs de mineração devem minerar somente o que o jogador configurar                                                           | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+| RNF02 | As novas mecânicas e blocos não devem impactar significativamente o desempenho do jogo, mesmo em servidores com muitos jogadores | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+| RNF05 | Utilizar imagens, ícones e texturas objetivas                                                                                    | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+
+<!-- atençao de respeitas os IDS de cada requisito!! o documento backward from pode ajudar-->
+
 ## Conclusão
 
 <!--
@@ -319,14 +343,16 @@ A aplicação do padrão Strategy na implementação da lógica de mineração d
 
 <div style="margin: 0 auto; width: fit-content;">
 
-| Versão | Data da alteração |      Alteração       |                                                                           Responsável                                                                           | Revisor | Data de revisão |
-|:------:|:-----------------:| :------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: | :-------------: |
-|  1.0   |       04/01       | Criação do documento | [Cássio Sousa dos Reis](https://github.com/csreis72) |         |                 |
+| Versão | Data da alteração |      Alteração       |                     Responsável                      |                      Revisor                       | Data de revisão |
+| :----: | :---------------: | :------------------: | :--------------------------------------------------: | :------------------------------------------------: | :-------------: |
+|  1.0   |    04/01/2025     | Criação do documento | [Cássio Sousa dos Reis](https://github.com/csreis72) | [Eduardo Sandes](https://github.com/DiceRunner714) |   05/01/2025    |
+|        |                   |                      |                                                      |                                                    |                 |
 
 </div>
 
 ## Controle de Revisão
 
-|                        Revisor(es)                        | O que foi realizado |
-| :-------------------------------------------------------: |:-------------------:|
-| |                     |
+|                    Revisor(es)                     |                O que foi realizado                |
+| :------------------------------------------------: | :-----------------------------------------------: |
+| [Eduardo Sandes](https://github.com/DiceRunner714) | Adiciona ano ao documento e tabela de requisitos. |
+|                                                    |                                                   |
