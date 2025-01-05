@@ -196,7 +196,7 @@ public interface Material {
 }
 ```
 
-### Classe: ModArmorMaterial
+### Classe: LogicThinkeringArmorMaterial
 
 ```java
 package com.logic_thinkering.itens;
@@ -284,7 +284,7 @@ public class LogicThinkeringArmorMaterial implements Material {
 }
 ```
 
-### Classe: ModToolMaterial
+### Classe: LogicThinkeringToolMaterial
 
 ```java
 package com.logic_thinkering.itens;

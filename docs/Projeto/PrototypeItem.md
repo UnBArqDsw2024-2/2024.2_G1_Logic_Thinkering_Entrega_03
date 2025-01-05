@@ -36,7 +36,7 @@ Após validar o funcionamento correto e alinhado ao padrão, elaboramos o diagra
 - Destaque os pontos principais ou insights obtidos durante o processo.
 - **APRESENTE AS VERSÕES DO DIAGRAMA!! Podem usar o formato abaixo para poluir menos a página**
 -->
-### Interface: PrototypeItem
+### Classe abstrata: PrototypeItem (Adaptação)
 ```java
 package com.logic_thinkering.itens;
 
@@ -326,7 +326,7 @@ Figura 4 - Prototype versão 1
 
 ![v1](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/prototype.png)
 
-<b>Fonte:</b> Carvalho, Sandes, 2025.
+<b>Fonte:</b> Reis, Carvalho, Sandes, 2025.
 </center>
 
 </details>
