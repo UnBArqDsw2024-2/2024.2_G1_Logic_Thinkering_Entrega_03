@@ -22,49 +22,340 @@ Para resolver esse problema, foi utilizamos o padrão de projeto bridge, que per
 ### Classe Abstrata: PrototypeItem
 
 ```java
-//Inserir
+package com.logic_thinkering.itens;
+
+public abstract class PrototypeItem {
+    protected StrategyRegister strategy;
+    protected Material material;
+
+    public abstract PrototypeItem clone();
+    public abstract void register(String id);
+    public abstract void updateMaterial(Material material);
+}
 ```
 
 ### Classe: ConcreteArmor
 
 ```java
-//Inserir
+package com.logic_thinkering.itens;
+
+import net.minecraft.item.Item;
+
+public class ConcreteArmor extends PrototypeItem {
+
+    public static Item ITEM;
+    private String id;
+    private ArmorType type;
+
+    public ConcreteArmor(String id, ArmorType type, Material material) {
+        if (material instanceof LogicThinkeringArmorMaterial materialArmadura) {
+            strategy = new ConcreteRegisterArmor();
+            this.type = type;
+            this.material = materialArmadura;
+            if(id != null) setId(id);
+        }
+    }
+
+    @Override
+    public ConcreteArmor clone() {
+        return new ConcreteArmor(null, this.type, this.material);
+    }
+
+    @Override
+    public void register(String id) {
+        ITEM = strategy.register(id, this.material, this.type.name());
+    }
+
+    public void setId(String id) {
+        this.id = id;
+        register(this.id);
+    }
+
+    public void setType(String type){
+        this.type = ArmorType.valueOf(type.toUpperCase());
+    }
+
+    public void updateMaterial(Material material){
+        if (material instanceof LogicThinkeringArmorMaterial materialArmadura) {
+            this.material = materialArmadura;
+        }
+    }
+
+}
 ```
 
 ### Classe: ConcreteItem
 
 ```java
-//Inserir
+package com.logic_thinkering.itens;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.Identifier;
+import java.util.function.Function;
+
+public class ConcreteItem extends PrototypeItem {
+    private String id;
+    public static Item ITEM;
+
+    public ConcreteItem(String id) {
+        this.material = null;
+        strategy = new ConcreteRegisterItem();
+        if(id != null) setId(id);
+    }
+
+    @Override
+    public ConcreteItem clone() {
+        return new ConcreteItem(null);
+    }
+
+    @Override
+    public void register(String id) {
+        ITEM = strategy.register(id);
+    }
+
+    @Override
+    public void updateMaterial(Material material) {
+        throw new IllegalArgumentException("This class does not support updateMaterial");
+    }
+
+    public void setId(String id) {
+        this.id = id;
+        register(id);
+    }
+
+}
 ```
 
 ### Classe: ConcreteTool
 
 ```java
-//Inserir
+package com.logic_thinkering.itens;
+
+import net.minecraft.item.Item;
+
+public class ConcreteTool extends PrototypeItem {
+
+    public static Item ITEM;
+    private String id;
+    private ToolType type;
+
+    public ConcreteTool(String id, ToolType type, Material material) {
+        if (material instanceof LogicThinkeringToolMaterial materialtool) {
+            strategy = new ConcreteRegisterTool();
+            this.type = type;
+            this.material = materialtool;
+            if(id != null) setId(id);
+        }
+    }
+
+    @Override
+    public ConcreteTool clone() {
+        return new ConcreteTool(null, this.type, this.material);
+    }
+
+    @Override
+    public void register(String id) {
+        ITEM = strategy.register(id, this.material, this.type.name());
+    }
+
+    public void setType(String type) {
+        this.type = ToolType.valueOf(type.toUpperCase());
+    }
+
+    public void updateMaterial(Material material) {
+        if (material instanceof LogicThinkeringToolMaterial materialtool) {
+            this.material = materialtool;
+        }
+    }
+
+    public void setId(String id) {
+        this.id = id;
+        register(id);
+    }
+
+}
 ```
 
 ### Interface: Material
 
 ```java
-//Inserir
+package com.logic_thinkering.itens;
+
+import net.minecraft.item.Item;
+import net.minecraft.registry.tag.TagKey;
+
+public interface Material {
+    void updateSettings(int i, int j, float k, float l);
+    void updateItemTag(TagKey<Item> repairIngredient);
+    String getName();
+}
 ```
 
 ### Classe: ModArmorMaterial
 
 ```java
-//Inserir
+package com.logic_thinkering.itens;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.equipment.ArmorMaterial;
+import net.minecraft.item.equipment.EquipmentType;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.Identifier;
+import java.util.EnumMap;
+
+
+public class LogicThinkeringArmorMaterial implements Material {
+
+    private ArmorMaterial material;
+    private String name;
+
+    public LogicThinkeringArmorMaterial(
+            String name,
+            int durability,
+            int[] defense,
+            int enchantmentValue,
+            RegistryEntry<SoundEvent> equipSound,
+            float toughness,
+            float knockbackResistance,
+            TagKey<Item> repairIngredient,
+            Identifier modelId
+    ) {
+        EnumMap<EquipmentType, Integer> map = new EnumMap<>(EquipmentType.class);
+        map.put(EquipmentType.BOOTS, defense[0]);
+        map.put(EquipmentType.LEGGINGS, defense[1]);
+        map.put(EquipmentType.CHESTPLATE, defense[2]);
+        map.put(EquipmentType.HELMET, defense[3]);
+        map.put(EquipmentType.BODY, defense[4]);
+
+        this.name = name;
+        this.material = new ArmorMaterial(
+                durability,
+                map,
+                enchantmentValue,
+                equipSound,
+                toughness,
+                knockbackResistance,
+                repairIngredient,
+                modelId);
+    }
+
+    public ArmorMaterial getMaterial() {
+        return material;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void updateSettings(int i, int j, float k, float l) {
+
+        this.material = new ArmorMaterial(
+                i,
+                material.defense(),
+                j,
+                material.equipSound(),
+                k,
+                l,
+                material.repairIngredient(),
+                material.modelId());
+    }
+
+    @Override
+    public void updateItemTag(TagKey<Item> repairIngredient) {
+        this.material = new ArmorMaterial(
+                material.durability(),
+                material.defense(),
+                material.enchantmentValue(),
+                material.equipSound(),
+                material.toughness(),
+                material.knockbackResistance(),
+                repairIngredient,
+                material.modelId());
+    }
+}
 ```
 
 ### Classe: ModToolMaterial
 
 ```java
-//Inserir
+package com.logic_thinkering.itens;
+
+import net.minecraft.block.Block;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.item.Item;
+
+public class LogicThinkeringToolMaterial implements Material {
+
+    private ToolMaterial material;
+    private String name;
+
+    public LogicThinkeringToolMaterial(
+            String name,
+            TagKey<Block> incorrectBlocksForDrops,
+            int durability,
+            float speed,
+            float attackDamageBonus,
+            int enchantmentValue,
+            TagKey<Item> repairItems
+    ) {
+        this.name = name;
+        this.material = new ToolMaterial(
+                incorrectBlocksForDrops,
+                durability,
+                speed,
+                attackDamageBonus,
+                enchantmentValue,
+                repairItems
+        );
+    }
+
+    public ToolMaterial getMaterial() {
+        return material;
+    }
+
+    @Override
+    public void updateSettings(int i, int j, float k, float l) {
+        this.material = new ToolMaterial(
+                material.incorrectBlocksForDrops(),
+                i, l, k, j,
+                material.repairItems()
+        );
+    }
+
+    @Override
+    public void updateItemTag(TagKey<Item> repairItems) {
+        this.material = new ToolMaterial(
+                material.incorrectBlocksForDrops(),
+                material.durability(),
+                material.speed(),
+                material.attackDamageBonus(),
+                material.enchantmentValue(),
+                repairItems
+        );
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+}
 ```
 
 <center>
 Figura 1 - Bridge
 
-![v2](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/strategyregisterv2.png)
+![v2](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/bridgeMaterial.png)
 
  <b>Fonte:</b> Carvalho, Sandes, 2025.
 </center>
@@ -101,7 +392,7 @@ A Figura 1 apresenta a versão 1.0 do UML de registro de itens.
 <center>
 Figura 1 - Bridge
 
-![v1](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/strategyregister.jpeg)
+![v1](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/bridgeMaterial.png)
 
 <b>Fonte:</b> Carvalho, Sandes, 2025.
 </center>
