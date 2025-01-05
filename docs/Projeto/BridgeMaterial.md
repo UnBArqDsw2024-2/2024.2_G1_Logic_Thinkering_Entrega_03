@@ -421,6 +421,7 @@ Figura 1 - Bridge
 
 | Matrícula | Aluno                             | Git                                               |
 | --------- | --------------------------------- | ------------------------------------------------- |
+| 221021886 | Cássio Sousa dos Reis                 | [csreis72](https://github.com/csreis72)                       |
 | 221008024 | Eduardo Matheus dos Santos Sandes | [DiceRunner714](https://github.com/DiceRunner714) |
 | 170010872 | Gabriela de Oliveira Lemos        | [heylisten64](https://github.com/heylisten64)     |
 | 221008150 | João Antonio Ginuino Carvalho     | [i-JSS](https://github.com/i-JSS)       |

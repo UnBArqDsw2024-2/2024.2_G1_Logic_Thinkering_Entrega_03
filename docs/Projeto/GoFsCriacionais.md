@@ -43,14 +43,20 @@ Para a equipe, a adoção de padrões criacionais auxilia na padronização de p
 - Se desejarem, podem citar os desafios encontrados seguindo a metodologia, propostas de melhoria, etc.
 -->
 
+
 <div align="justify">
 
 &emsp;&emsp;
-No contexto do desenvolvimento do projeto, a aplicação dos padrões criacionais foi orientada para facilitar a criação de objetos complexos e modularizar o código. Foram estudados os padrões Factory Method, Abstract Factory, Builder e Prototype, aplicando-os conforme as necessidades específicas do projeto.
-
-&emsp;&emsp;
-O Factory Method é aplicado na criação de novos tipos de blocos, permitindo flexibilidade e expansão do sistema. O Builder é essencial para simplificar a construção de itens compostos, como armaduras e ferramentas reforçadas, enquanto o Abstract Factory é empregado na criação de famílias de objetos relacionados, como materiais e itens. O Prototype é usado para clonar robôs ou itens com configurações pré-definidas.
+Inicialmente, dividimos as funcionalidades do projeto em quatro categorias. Cada subgrupo foi designado a uma funcionalidade proporcional ao seu nível de dificuldade, de modo a manter um equilíbrio no trabalho entre as equipes. Os subgrupos tiveram a liberdade de escolher e implementar o padrão de projeto (GoF) criacional que considerassem mais adequado. A seguir, apresentamos a tabela com os integrantes de cada subgrupo, suas respectivas responsabilidades e os padrões de projeto utilizados:
 </div>
+
+
+| Grupo | Alunos                                                 | Responsabilidade           | GOF                                    |
+|-------|--------------------------------------------------------|----------------------------|----------------------------------------|
+| 1     | André Silva, Artur Bartz, Samara Santos e Thomas Alves | Portas lógica e antena     |                                        |
+| 2     | Carlos Rodrigues, Danilo Melo e Patrícia Silva         | Livro Guia e Minimapa      |                                        |
+| 3     | Cássio Reis, Vinicius Santos, Sunamita Santos          | Bloco clocker e mineradora | [Factory Method](/Projeto/FactoryMethod.md)   |
+| 4     | Eduardo Sandes, Gabriela Lemos e João Carvalho         | Itens (todos os itens)     | [Prototype](/Projeto/PrototypeItem.md) |
 
 
 ## Conclusão
@@ -60,7 +66,9 @@ O Factory Method é aplicado na criação de novos tipos de blocos, permitindo f
 -   **Apresente perspectivas para melhorias ou trabalhos futuros.**
 -->
 
-<div align="justify">&emsp;&emsp;
+<div align="justify">
+
+&emsp;&emsp;
 Portanto, Os padrões de projeto criacionais desempenharam um papel fundamental na criação de objetos de forma eficiente e flexível. A implementação de padrões como Factory Method, Builder, Abstract Factory e Prototype trouxe organização ao código e reduziu a complexidade de expandir funcionalidades, como a criação de novos blocos, itens e estruturas de rede redstone.
 
 &emsp;&emsp;
@@ -91,7 +99,7 @@ Os objetivos do projeto foram alcançados com sucesso, resultando em um código 
 <div style="margin: 0 auto; width: fit-content;">
 
 | Matrícula | Aluno                                 | Git                                                           |
-| --------- | ------------------------------------- | ------------------------------------------------------------- |
+| --------- | ------------------------------------- |---------------------------------------------------------------|
 | 221007813 | André Emanuel Bispo da Silva          | [Hunter104](https://github.com/Hunter104)                     |
 | 221007869 | Artur Henrique Holz Bartz             | [H0lzz](https://github.com/H0lzz)                             |
 | 221931265 | Carlos Eduardo Rodrigues              | [carlos-kadu](https://github.com/carlos-kadu)                 |
@@ -99,7 +107,7 @@ Os objetivos do projeto foram alcançados com sucesso, resultando em um código 
 | 221031149 | Danilo César Tertuliano Melo          | [DaniloCTM](https://github.com/DaniloCTM)                     |
 | 221008024 | Eduardo Matheus dos Santos Sandes     | [DiceRunner714](https://github.com/DiceRunner714)             |
 | 170010872 | Gabriela de Oliveira Lemos            | [heylisten64](https://github.com/heylisten64)                 |
-| 221008150 | João Antonio Ginuino Carvalho         | [joaoseisei](https://github.com/joaoseisei)                   |
+| 221008150 | João Antonio Ginuino Carvalho         | [i-JSS](https://github.com/i-JSS)                             |
 | 221037993 | Patrícia Helena Macedo da Silva       | [patyhelenaa](https://github.com/patyhelenaa)                 |
 | 221008445 | Samara Letícia Alves dos Santos       | [samarawwleticia](https://github.com/samarawwleticia)         |
 | 221008697 | Sunamita Vitória Rodrigues dos Santos | [sunamit](https://github.com/sunamit)                         |
@@ -123,12 +131,12 @@ Os objetivos do projeto foram alcançados com sucesso, resultando em um código 
 
 | Versão | Data da alteração |            Alteração            |                  Responsável                  |                      Revisor                       | Data de revisão |
 | :----: | :---------------: | :-----------------------------: | :-------------------------------------------: | :------------------------------------------------: | :-------------: |
-|  1.0   |       11/12       |      Criação do documento       |    [Artur Barlz](https://github.com/H0lzz)    |                                                    |                 | 
+|  1.0   |       11/12       |      Criação do documento       |    [Artur Barlz](https://github.com/H0lzz)    | [João Antonio G. Carvalho](https://github.com/i-JSS)                                                    |  05/01                | 
 
 </div>
 
 ## Controle de Revisão
 
-|                        Revisor(es)                        |                                             O que foi realizado                                             |
-|:---------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------:|
-|                                                           |                                                                                                             |
+|                        Revisor(es)                        |           O que foi realizado           |
+|:---------------------------------------------------------:|:---------------------------------------:|
+| [João Antonio G. Carvalho](https://github.com/i-JSS)                                                           | Atualiza metodologia e melhora o textos |
