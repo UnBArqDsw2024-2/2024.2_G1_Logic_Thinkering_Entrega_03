@@ -181,6 +181,31 @@ Figura 1 - Factory Method
 A implementação do padrão Factory Method no ClockEnergy permitiu uma criação flexível e desacoplada de diferentes tipos de geradores de pulso, como regulares ou aleatórios. Isso centraliza a lógica de alternância de estado e reagendamento de pulsos na classe ClockEnergy, enquanto delega a responsabilidade de definir o intervalo de pulso para subclasses específicas. Foi possível observar que o uso do Factory Method reduz a duplicação de código, facilita a manutenção e expansão do sistema,permitindo a adição de novos comportamentos sem modificar a classe principal.
 </div>
 
+<!-- no caso da entrega 01-->
+
+### Requisitos Elicitados
+<center> <b>Tabela 01</b> - Requisitos Elicitados no artefato <b>Brainstorming</b></center>
+
+| ID    | Descrição                                                                                                                         |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------- |
+| RF17  | Permitir ao jogador construir circuitos lógicos sem a necessidade de componentes externos.                                        |
+| RNF02 | As novas mecânicas e blocos não devem impactar significativamente o desempenho do jogo, mesmo em servidores com muitos jogadores. |
+| RNF05 | Utilizar imagens, ícones e texturas objetivas.                                                                                    |
+
+<!-- no caso da entrega 02-->
+
+### Requisitos Modelados
+<center> <b>Tabela 01</b> - Requisitos Modelados no artefato <b>Diagrama de Classes</b></center>
+
+| ID    | Descrição                                                                                                                        | Origem                                                                                                                      |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| RF17  | Permitir ao jogador construir circuitos lógicos sem a necessidade de componentes externos (timer, clock…)                        | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+| RNF02 | As novas mecânicas e blocos não devem impactar significativamente o desempenho do jogo, mesmo em servidores com muitos jogadores | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+| RNF05 | Utilizar imagens, ícones e texturas objetivas                                                                                    | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+|       |                                                                                                                                  |                                                                                                                             |
+
+<!-- atençao de respeitas os IDS de cada requisito!! o documento backward from pode ajudar-->
+
 ## Conclusão
 
 <!--
@@ -232,14 +257,15 @@ Em suma, a aplicação do Factory Method no ClockEnergy aprimora a flexibilidade
 
 <div style="margin: 0 auto; width: fit-content;">
 
-| Versão | Data da alteração |      Alteração       |                                                                           Responsável                                                                           | Revisor | Data de revisão |
-|:------:|:-----------------:| :------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: | :-------------: |
-|  1.0   |       05/01       | Criação do documento | [Cássio Reis](https://github.com/csreis72)        |                 |
+| Versão | Data da alteração |      Alteração       |                Responsável                 |                      Revisor                       | Data de revisão |
+| :----: | :---------------: | :------------------: | :----------------------------------------: | :------------------------------------------------: | :-------------: |
+|  1.0   |       05/01/2025       | Criação do documento | [Cássio Reis](https://github.com/csreis72) | [Eduardo Sandes](https://github.com/DiceRunner714) |   05/01/2025              |
 
 </div>
 
 ## Controle de Revisão
 
-|                        Revisor(es)                        | O que foi realizado |
-| :-------------------------------------------------------: |:-------------------:|
-| |                     |
+|                    Revisor(es)                     |                     O que foi realizado                      |
+| :------------------------------------------------: | :----------------------------------------------------------: |
+| [Eduardo Sandes](https://github.com/DiceRunner714) | Ano foi inserido nas datas e os requisitos foram adicionados |
+|                                                    |                                                              |

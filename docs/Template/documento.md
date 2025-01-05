@@ -100,6 +100,26 @@ Primeira adaptação ao Bizagi pode ser vista na Figura 3.
 
 </details>
 
+<!-- no caso da entrega 01-->
+
+### Requisitos Elicitados
+<center> <b>Tabela 01</b> - Requisitos Elicitados no artefato <b>Brainstorming</b></center>
+
+|ID| Descrição |
+|--|--|
+|  |  |
+
+<!-- no caso da entrega 02-->
+
+### Requisitos Modelados
+<center> <b>Tabela 01</b> - Requisitos Modelados no artefato <b>Diagrama de Classes</b></center>
+
+|ID| Descrição | Origem |
+|--|--|--|
+|  |  | [Brainstorming](link) |
+
+<!-- atençao de respeitas os IDS de cada requisito!! o documento backward from pode ajudar-->
+
 ## Conclusão
 
 <!--
@@ -149,7 +169,7 @@ Primeira adaptação ao Bizagi pode ser vista na Figura 3.
 
 | Versão | Data da alteração |      Alteração       |                                                                           Responsável                                                                           | Revisor | Data de revisão |
 | :----: | :---------------: | :------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: | :-------------: |
-|  1.0   |       03/11       | Criação do documento | [Eduardo Sandes](https://github.com/DiceRunner714), [Gabriela Lemos](https://github.com/heylisten64), [João Antonio G. Carvalho](https://github.com/joaoseisei) |         |                 |
+|  1.0   |       03/11/2024       | Criação do documento | [Eduardo Sandes](https://github.com/DiceRunner714), [Gabriela Lemos](https://github.com/heylisten64), [João Antonio G. Carvalho](https://github.com/joaoseisei) |         |                 |
 
 </div>
 
