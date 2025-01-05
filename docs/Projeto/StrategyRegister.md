@@ -165,7 +165,7 @@ public class ConcreteRegisterArmor implements StrategyRegister {
 <center>
 Figura 1 - Strategy
 
-![v2](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/strategyregisterv2.png)
+![v2](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/strategyregisterv3.png)
 
  <b>Fonte:</b> Carvalho, Sandes, 2025.
 </center>
@@ -248,6 +248,7 @@ Figura 1 - Strategy
 | Versão | Data da alteração |      Alteração       |                                                                           Responsável                                                                           | Revisor | Data de revisão |
 |:------:|:-----------------:| :------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: | :-------------: |
 |  1.0   |       02/01       | Criação do documento | [Eduardo Sandes](https://github.com/DiceRunner714), [Gabriela Lemos](https://github.com/heylisten64), [João Antonio G. Carvalho](https://github.com/i-JSS) |         |                 |
+|  1.0   |       04/01       | Adiciona versão simplificada do diagrama | [Cássio Reis](https://github.com/csreis72) |         |                 |
 
 </div>
 
