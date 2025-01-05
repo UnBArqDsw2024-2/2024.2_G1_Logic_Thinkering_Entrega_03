@@ -237,6 +237,8 @@ Figura 1 - Builder
 ![Modelagem - Factory Method](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/builder.png)
 
 <b>Fonte:</b> Silva, André, 2025.
+implementação do padrão Builder permitiu uma interface simplificada para a criação dos objetos ajudadores de registro commo se pode ver no diagrama, abstraindo a complexidade da criação do objeto e do registro de blocos e itens.
+
 </center>
 
 ## Conclusão
