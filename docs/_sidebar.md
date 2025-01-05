@@ -36,7 +36,7 @@
         - [Bibliografia](Projeto/FactoryMethod.md#bibliografia)
         - [Participantes](Projeto/FactoryMethod.md#participantes)
         - [Histórico de Versão](Projeto/FactoryMethod.md#histórico-de-versão)
-      - [3.1.1 Builder](/Projeto/Builder.md)
+      - [3.1.3 Builder](/Projeto/Builder.md)
     - [3.2. Padrões de Projeto GoFs Estruturais](Projeto/GoFsEstruturais.md)
       - [3.2.1 Bridge - Materiais](Projeto/BridgeMaterial.md)
         - [Objetivo](Projeto/BridgeMaterial.md#objetivo)
@@ -69,6 +69,7 @@
         - [Participantes](Projeto/StrategyRegister.md#participantes)
         - [Histórico de Versão](Projeto/StrategyRegister.md#histórico-de-versão)
       - [3.3.2 Strategy - Robô de Mineração](Projeto/MiningStrategy.md)
+      - [3.3.3 Strategy - Portas Lógicas](Projeto/LogicStrategy.md)
     - [3.4. Participações - Padrões de Projeto](PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](PadroesDeProjeto/3.5.IniciativasExtras.md)
       

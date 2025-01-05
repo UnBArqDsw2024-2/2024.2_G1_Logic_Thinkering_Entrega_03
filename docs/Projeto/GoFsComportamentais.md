@@ -43,7 +43,7 @@ Inicialmente, dividimos as funcionalidades do projeto em quatro categorias. Cada
 
 | Grupo | Alunos                                                      | Responsabilidade           | GOF                                                        |
 |-------|-------------------------------------------------------------|----------------------------|------------------------------------------------------------|
-| 1     | André Silva, Artur Bartz, Samara Santos e Thomas Alves      | Portas lógica e antena     |                                                            |
+| 1     | André Silva, Artur Bartz, Samara Santos e Thomas Alves      | Portas lógica e antena     | [Strategy - Portas lógicas](/Projeto/LogicStrategy.md)     |
 | 2     | Carlos Rodrigues, Danilo Melo e Patrícia Silva              | Livro Guia e Minimapa      |                                                            |
 | 3     | Cássio Reis, Vinicius Santos, Sunamita Santos                            | Bloco clocker e mineradora | [Strategy - Robô de Mineração](/Projeto/MiningStrategy.md) |
 | 4     | Eduardo Sandes, Gabriela Lemos e João Carvalho | Itens (todos os itens)     | [Strategy - Item](/Projeto/StrategyRegister.md)            |
