@@ -38,21 +38,21 @@ Após validar o funcionamento correto e alinhado ao padrão, elaboramos o diagra
 -->
 ### Interface: PrototypeItem
 ```java
-package com.example;
-import net.minecraft.item.Item;
+package com.logic_thinkering.itens;
 
-public interface PrototypeItem {
-    default void insertOnGroup(Item item) {
-        GuiaInventario.adicionarItem(item);
-    }
-    PrototypeItem clone();
-    void updateItem(String id);
+public abstract class PrototypeItem {
+    protected StrategyRegister strategy;
+    protected Material material;
+
+    public abstract PrototypeItem clone();
+    public abstract void register(String id);
+    public abstract void updateMaterial(Material material);
 }
 ```
 
 ### Classe: ConcreteItem
 ```java
-package com.example;
+package com.logic_thinkering.itens;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -63,11 +63,13 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
-public class ConcreteItem implements PrototypeItem {
+public class ConcreteItem extends PrototypeItem {
     private String id;
     public static Item ITEM;
 
     public ConcreteItem(String id) {
+        this.material = null;
+        strategy = new ConcreteRegisterItem();
         if(id != null) setId(id);
     }
 
@@ -77,18 +79,18 @@ public class ConcreteItem implements PrototypeItem {
     }
 
     @Override
-    public void updateItem(String id) {
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ExampleMod.MOD_ID, id));
-        Function<Item.Settings, Item> factory = Item::new;
-        Item item = factory.apply(new Item.Settings().registryKey(key));
-        if (item instanceof BlockItem blockItem) blockItem.appendBlocks(Item.BLOCK_ITEMS, item);
-        ConcreteItem.ITEM = Registry.register(Registries.ITEM, key, item);
-        insertOnGroup(ConcreteItem.ITEM);
+    public void register(String id) {
+        ITEM = strategy.register(id);
+    }
+
+    @Override
+    public void updateMaterial(Material material) {
+        throw new IllegalArgumentException("This class does not support updateMaterial");
     }
 
     public void setId(String id) {
         this.id = id;
-        updateItem(id);
+        register(id);
     }
 
 }
@@ -96,152 +98,181 @@ public class ConcreteItem implements PrototypeItem {
 
 ### Classe: ConcreteArmor
 ```java
-package com.example;
+package com.logic_thinkering.itens;
 
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.equipment.EquipmentType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
 
-import java.util.function.Function;
-
-
-public class ConcreteArmor implements PrototypeItem {
-
-    private enum ArmorType {
-        HELMET, CHESTPLATE, LEGGINGS, BOOTS
-    }
-    private enum Material {
-        REINFORCED_COPPER, REINFORCED_EMERALD, REINFORCED_AMETHYST
-    }
+public class ConcreteArmor extends PrototypeItem {
 
     public static Item ITEM;
     private String id;
     private ArmorType type;
-    private Material material;
 
-    public ConcreteArmor(String id, String type, String material) {
-        this.type = ArmorType.valueOf(type.toUpperCase());
-        this.material = Material.valueOf(material.toUpperCase());
-        if(id != null) setId(id);
+    public ConcreteArmor(String id, ArmorType type, Material material) {
+        if (material instanceof LogicThinkeringArmorMaterial materialArmadura) {
+            strategy = new ConcreteRegisterArmor();
+            this.type = type;
+            this.material = materialArmadura;
+            if(id != null) setId(id);
+        }
     }
 
     @Override
     public ConcreteArmor clone() {
-        return new ConcreteArmor(null, this.type.name(), this.material.name());
+        return new ConcreteArmor(null, this.type, this.material);
     }
 
     @Override
-    public void updateItem(String id) {
-        Function<Item.Settings, Item> factory = (settings) -> new ArmorItem(
-                ModArmorMaterial.valueOf(this.material.name()),
-                EquipmentType.valueOf(this.type.name()),
-                settings);
-
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ExampleMod.MOD_ID, id));
-        Item.Settings settings = new Item.Settings();
-        Item item = factory.apply(settings.registryKey(key));
-        ConcreteArmor.ITEM = Registry.register(Registries.ITEM, key, item);
-
-        insertOnGroup(ConcreteArmor.ITEM);
+    public void register(String id) {
+        ITEM = strategy.register(id, this.material, this.type.name());
     }
-
 
     public void setId(String id) {
         this.id = id;
-        updateItem(this.id);
+        register(this.id);
     }
 
     public void setType(String type){
         this.type = ArmorType.valueOf(type.toUpperCase());
     }
 
-    public void setMaterial(String material){
-        this.material = Material.valueOf(material.toUpperCase());
+    public void updateMaterial(Material material){
+        if (material instanceof LogicThinkeringArmorMaterial materialArmadura) {
+            this.material = materialArmadura;
+        }
     }
+
 }
 ```
 
 ### Classe: ConcreteTool
 ```java
-import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
-import java.util.function.Function;
+package com.logic_thinkering.itens;
 
-public class ConcreteTool implements PrototypeItem {
-    private enum ToolType {
-        AXE, HOE, PICKAXE, SHOVEL, SWORD
-    }
-    private enum Material {
-        REINFORCED_COPPER, REINFORCED_EMERALD, REINFORCED_AMETHYST
-    }
+import net.minecraft.item.Item;
+
+public class ConcreteTool extends PrototypeItem {
 
     public static Item ITEM;
     private String id;
     private ToolType type;
-    private Material material;
 
-    public ConcreteTool(String id, String type, String material) {
-        this.id = id;
-        this.type = ToolType.valueOf(type.toUpperCase());
-        this.material = Material.valueOf(material.toUpperCase());
+    public ConcreteTool(String id, ToolType type, Material material) {
+        if (material instanceof LogicThinkeringToolMaterial materialtool) {
+            strategy = new ConcreteRegisterTool();
+            this.type = type;
+            this.material = materialtool;
+            if(id != null) setId(id);
+        }
     }
 
     @Override
     public ConcreteTool clone() {
-        return new ConcreteTool(this.id, this.type.name(), this.material.name());
+        return new ConcreteTool(null, this.type, this.material);
     }
 
     @Override
-    public void updateItem(String id) {
-        Function<Item.Settings, Item> factory = (settings) -> {
-            ToolMaterial material = MateriaisFerramenta.valueOf(this.material.name());
-            return switch (this.type) {
-                case SWORD -> new SwordItem(material, 3, -1.9F, settings);
-                case AXE -> new AxeItem(material, 6, -2.7F, settings);
-                case PICKAXE -> new PickaxeItem(material, 1, -2.8F, settings);
-                case SHOVEL -> new ShovelItem(material, 1.5F, -3.0F, settings);
-                case HOE -> new HoeItem(material, -3, 0.0F, settings);
-            };
-        };
-
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ExampleMod.MOD_ID, id));
-        Item.Settings settings = new Item.Settings();
-        Item item = factory.apply(settings.registryKey(key));
-        ConcreteTool.ITEM = Registry.register(Registries.ITEM, key, item);
-
-        insertOnGroup(ConcreteTool.ITEM);
+    public void register(String id) {
+        ITEM = strategy.register(id, this.material, this.type.name());
     }
 
     public void setType(String type) {
         this.type = ToolType.valueOf(type.toUpperCase());
     }
 
-    public void setMaterial(String material) {
-        this.material = Material.valueOf(material.toUpperCase());
+    public void updateMaterial(Material material) {
+        if (material instanceof LogicThinkeringToolMaterial materialtool) {
+            this.material = materialtool;
+        }
     }
 
     public void setId(String id) {
         this.id = id;
-        updateItem(id);
+        register(id);
     }
 
 }
 ```
+
+## Utilização do prototype
+
+<div align="justify">&emsp;&emsp; O padrão de projeto Prototype foi utilizado para otimizar a criação de itens no sistema. Para isso, implementamos três funções principais: `insertCommonItems`, `insertAllArmors` e `insertAllTools`. Essas funções permitem clonar objetos base (prototypes) e modificar apenas os atributos necessários para atender às especificações de cada item. Esse método reduz significativamente o impacto de performance, aproveitando ao máximo a eficiência do padrão Prototype ao evitar a criação redundante de objetos do zero. </div>
+
+```java
+package com.logic_thinkering;
+
+import com.logic_thinkering.itens.*;
+import net.minecraft.item.equipment.EquipmentModels;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.sound.SoundEvents;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LogicThinkeringItem {
+    public List<ConcreteItem> items = new ArrayList<>();
+    public List<ConcreteArmor> armors = new ArrayList<>();
+    public List<ConcreteTool> tools = new ArrayList<>();
+
+    public List<LogicThinkeringArmorMaterial> armorMaterials = new ArrayList<>();
+    public List<LogicThinkeringToolMaterial> toolMaterials = new ArrayList<>();
+
+    public LogicThinkeringItem() {
+        items.add(new ConcreteItem("reinforced_copper_ingot"));
+        insertCommonItem("reinforced_emerald_shard");
+        insertCommonItem("reinforced_amethyst_shard");
+
+        armorMaterials.add(new LogicThinkeringArmorMaterial("REINFORCED_COPPER", 37, new int[]{3, 6, 8, 3, 11}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ItemTags.REPAIRS_GOLD_ARMOR, EquipmentModels.NETHERITE));
+        armorMaterials.add(new LogicThinkeringArmorMaterial("REINFORCED_EMERALD", 37, new int[]{3, 6, 8, 3, 11}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ItemTags.REPAIRS_GOLD_ARMOR, EquipmentModels.NETHERITE));
+        armorMaterials.add(new LogicThinkeringArmorMaterial("REINFORCED_AMETHYST", 37, new int[]{3, 6, 8, 3, 11}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ItemTags.REPAIRS_GOLD_ARMOR, EquipmentModels.NETHERITE));
+
+        toolMaterials.add(new LogicThinkeringToolMaterial("REINFORCED_COPPER", BlockTags.INCORRECT_FOR_STONE_TOOL, 200, 6.5F, 2.0F, 14, ItemTags.STONE_TOOL_MATERIALS));
+        toolMaterials.add(new LogicThinkeringToolMaterial("REINFORCED_EMERALD", BlockTags.INCORRECT_FOR_STONE_TOOL, 250, 6.5F, 3.0F, 14, ItemTags.STONE_TOOL_MATERIALS));
+        toolMaterials.add(new LogicThinkeringToolMaterial("REINFORCED_AMETHYST", BlockTags.INCORRECT_FOR_STONE_TOOL, 500, 6.5F, 5.0F, 14, ItemTags.STONE_TOOL_MATERIALS));
+
+        insertAllArmors();
+        insertAllTools();
+    }
+
+    private void insertCommonItem(String id){
+        ConcreteItem clone = items.getFirst().clone();
+        clone.register(id);
+        items.add(clone);
+    }
+
+    private void insertAllArmors() {
+        for (ArmorType armorType : ArmorType.values()) {
+            ConcreteArmor prototype = new ConcreteArmor(armorMaterials.getFirst().getName().toLowerCase() + "_" + armorType.name().toLowerCase(), armorType, armorMaterials.getFirst());
+            armors.add(prototype);
+
+            for (int i = 1; i < armorMaterials.size(); i++) {
+                ConcreteArmor clone = prototype.clone();
+                clone.updateMaterial(armorMaterials.get(i));
+                clone.register(armorMaterials.get(i).getName().toLowerCase() + "_" + armorType.name().toLowerCase());
+                armors.add(clone);
+            }
+        }
+    }
+
+    private void insertAllTools() {
+        for (ToolType toolType : ToolType.values()) {
+            ConcreteTool prototype = new ConcreteTool(toolMaterials.getFirst().getName().toLowerCase() + "_" + toolType.name().toLowerCase(), toolType, toolMaterials.getFirst());
+            tools.add(prototype);
+
+            for (int i = 1; i < toolMaterials.size(); i++) {
+                ConcreteTool clone = prototype.clone();
+                clone.updateMaterial(toolMaterials.get(i));
+                clone.register(toolMaterials.get(i).getName().toLowerCase() + "_" + toolType.name().toLowerCase());
+                tools.add(clone);
+            }
+        }
+    }
+
+}
+```
+
+### Imagens
 
  <center>
 Figura 2 - Prototype
@@ -254,14 +285,11 @@ Figura 2 - Prototype
  <center>
 Figura 3 - Barra do criativo com os itens adicionados
 
-![resumo](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/prototype.png)
+![v2](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/prototypev2.png)
 
  <b>Fonte:</b> Carvalho, Sandes, 2024.
 </center>
 
-<div align="justify">&emsp;&emsp;
-O diagrama apresentado descreve a estrutura de classes e os relacionamentos utilizados no desenvolvimento do mod, focando na criação dos itens personalizados. A implementação segue o padrão de projeto Prototype, evidenciado pela interface PrototypeItem, que define os métodos clone() e updateItem(), permitindo a reutilização e modificação de objetos. As classes concretas ConcreteItem, ConcreteArmor e ConcreteTool implementam a interface, especializando os comportamentos, bem como as funcionalidades de cada tipo de item. 
-</div>
 
 
 ## Conclusão
@@ -275,10 +303,32 @@ O diagrama apresentado descreve a estrutura de classes e os relacionamentos util
 <div align="justify">&emsp;&emsp;
 Com o uso do padrão Prototype, foi possível otimizar a criação de itens no mod, garantindo eficiência e redução de custos relacionados 
 à criação de instâncias repetitivas. Essa abordagem destacou-se como uma solução prática para os desafios enfrentados, 
-contribuindo para a organização e manutenção do código. Entretanto, vale resaltar que foi realizado uma cópia profunda pra garantir
+contribuindo para a organização e manutenção do código. Além disso, optamos por utilizar uma classe absstrada no lugar de interface
+para relacionar melhor o prototype com outros designs de projeto, vale resaltar que foi realizado uma cópia profunda pra garantir
 que o objeto clonado nao compartilhe referências com o protótipo, sendo assim o custo para clonagem se iguala ao custo de criar uma 
 nova instância.
 </div>
+
+### Versões Anteriores
+
+<details>
+<summary>Visualizar versão 1.0</summary>
+
+### Versão 1.0
+
+<!-- Aqui documente as mudanças de uma versão para a outra -->
+
+A Figura 4 apresenta a versão 1.0 do UML do prototype.
+
+<center>
+Figura 4 - Prototype versão 1
+
+![v1](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/prototype.png)
+
+<b>Fonte:</b> Carvalho, Sandes, 2025.
+</center>
+
+</details>
 
 ## Bibliografia
 
@@ -321,9 +371,10 @@ nova instância.
 
 <div style="margin: 0 auto; width: fit-content;">
 
-| Versão | Data da alteração |      Alteração       |                                                                           Responsável                                                                           | Revisor | Data de revisão |
-|:------:|:-----------------:| :------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: | :-------------: |
-|  1.0   |       28/12       | Criação do documento | [Eduardo Sandes](https://github.com/DiceRunner714), [Gabriela Lemos](https://github.com/heylisten64), [João Antonio G. Carvalho](https://github.com/i-JSS) |         |                 |
+| Versão | Data da alteração |              Alteração               |                                                                         Responsável                                                                          | Revisor | Data de revisão |
+|:------:|:-----------------:|:------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------:| :-----: | :-------------: |
+|  1.0   |       28/12       |         Criação do documento         |  [Eduardo Sandes](https://github.com/DiceRunner714), [Gabriela Lemos](https://github.com/heylisten64), [João Antonio G. Carvalho](https://github.com/i-JSS)  |         |                 |
+|  2.0   |       04/01       | Adiciona segunda versão do prototype | [Eduardo Sandes](https://github.com/DiceRunner714), [Gabriela Lemos](https://github.com/heylisten64), [João Antonio G. Carvalho](https://github.com/i-JSS), [Cássio Sousa dos Reis](https://github.com/csreis72)  |         |                 |
 
 </div>
 
