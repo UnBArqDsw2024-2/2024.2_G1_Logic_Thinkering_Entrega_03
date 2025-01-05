@@ -3,7 +3,7 @@
 ## Introdução
 
 <div align="justify">&emsp;&emsp;
-O Builder é um padrão de design criacional que permite construir objetos completos passo a passo. permitindo a produção de diferentes representações do mesmo objeto usando o mesmo código
+O Builder é um padrão de design criacional que permite construir objetos completos passo a passo¹. permitindo a produção de diferentes representações do mesmo objeto usando o mesmo código
 </div>
 
 ## Objetivo

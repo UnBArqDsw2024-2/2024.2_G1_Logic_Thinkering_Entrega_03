@@ -2,7 +2,7 @@
 
 ## Introdução
 <div align="justify">
-Este documento apresenta o padrão de projeto Strategy das portas lógicas, um padrão de projeto que permitem definir uma família de algoritmos que podem ser trocados entre sí. permitindo maior flexibilidade em escolha de algoritmos que resolvem o mesmo problema.
+Este documento apresenta o padrão de projeto Strategy das portas lógicas, um padrão de projeto que permitem definir uma família de algoritmos que podem ser trocados entre sí¹. permitindo maior flexibilidade em escolha de algoritmos que resolvem o mesmo problema.
 </div>
 
 ## Objetivo
@@ -191,6 +191,7 @@ A aplicação do padrão Strategy na implementação da lógica booleana minera�
 ## Bibliografia
 
 <!-- - **Altere!**-->
+> [1] REFACTORING GURU. Builder. Disponível em: <https://refactoring.guru/design-patterns/builder>.
 
 
 <center>
