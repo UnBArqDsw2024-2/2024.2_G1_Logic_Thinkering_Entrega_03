@@ -360,11 +360,14 @@ Figura 1 - Bridge
  <b>Fonte:</b> Carvalho, Sandes, 2025.
 </center>
 
-<div align="justify">&emsp;&emsp;
-TEXTO
-TEXTO
-TEXTO
+<div align="justify">&emsp;&emsp; A implementação do padrão Bridge trouxe resultados expressivos na organização e flexibilidade do sistema de gerenciamento de itens e materiais do mod "Logic Thinkering". A separação clara entre a abstração e a implementação reduziu a complexidade e a quantidade de subclasses necessárias. Além disso, o desacoplamento das hierarquias permite a rápida adição de novos tipos de materiais ou itens sem necessidade de refatorações extensivas no futuro. 
 </div>
+
+ <div align="justify">&emsp;&emsp; 
+ Entre os principais benefícios observados estão a escalabilidade do mod, bem como a simplificação do código, que agora é capaz de lidar com variações futuras de maneira eficiente. A modularidade introduzida possibilitou o reaproveitamento de componentes existentes, minimizando duplicações. 
+ </div>
+
+<div align="justify">&emsp;&emsp; Por fim, o uso do padrão Bridge foi fundamental para atingir uma arquitetura flexível e extensível, atendendo plenamente os objetivos propostos de desacoplamento e reuso. </div>
 
 ## Conclusão
 
@@ -387,7 +390,7 @@ Com a implementação do padrão Bridge, foi possível gerenciar a relação ent
 
 <!-- Aqui documente as mudanças de uma versão para a outra -->
 
-A Figura 1 apresenta a versão 1.0 do UML de registro de itens.
+A Figura 1 apresenta a versão 1.0 do UML.
 
 <center>
 Figura 1 - Bridge
@@ -404,7 +407,7 @@ Figura 1 - Bridge
 
 <!-- - **Altere!**-->
 
-> [1] SERRANO, Milene. Videoaula: [10b - Vídeo-Aula - DSW - GoFs - Comportamentais - Strategy](https://unbbr-my.sharepoint.com/:v:/g/personal/mileneserrano_unb_br/EUZop92j5WlIvdppY_A5wGcBt5xkL_HFpF8USoR6BJh4lw?e=JRjZ7B). [Online]. Disponível em: [https://unbbr-my.sharepoint.com/:v:/g/personal/mileneserrano_unb_br/EUZop92j5WlIvdppY_A5wGcBt5xkL_HFpF8USoR6BJh4lw?e=JRjZ7B](https://unbbr-my.sharepoint.com/:v:/g/personal/mileneserrano_unb_br/EUZop92j5WlIvdppY_A5wGcBt5xkL_HFpF8USoR6BJh4lw?e=JRjZ7B) . Acesso em: 02 jan. 2025.
+> [1] SERRANO, Milene. Videoaula: [09d - Vídeo-Aula - DSW - GoFs - Estruturais - Demais Padrões - Visão Rápida](https://unbbr-my.sharepoint.com/:v:/g/personal/mileneserrano_unb_br/EZzj0BVtpTxMnBCtiUlE0r8BD7Tw_XOeK1J8Jn__qgod0A?e=GQQXjZ). [Online]. Disponível em: [https://unbbr-my.sharepoint.com/:v:/g/personal/mileneserrano_unb_br/EZzj0BVtpTxMnBCtiUlE0r8BD7Tw_XOeK1J8Jn__qgod0A?e=GQQXjZ](https://unbbr-my.sharepoint.com/:v:/g/personal/mileneserrano_unb_br/EZzj0BVtpTxMnBCtiUlE0r8BD7Tw_XOeK1J8Jn__qgod0A?e=GQQXjZ) . Acesso em: 04 jan. 2025.
 
 <center>
 
