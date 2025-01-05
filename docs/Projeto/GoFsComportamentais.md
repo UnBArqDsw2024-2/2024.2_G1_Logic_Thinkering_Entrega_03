@@ -7,9 +7,11 @@
 - Destaque a relevância do diagrama ou abordagem para a área de aplicação.
 - Mencione brevemente os principais aspectos que serão abordados no documento.
 -->
-<div align="justify">&emsp;&emsp;
+<div align="justify">
+&emsp;&emsp;
 Os padrões comportamentais do GoF desempenham um papel crucial na definição de interações e responsabilidades entre os objetos em um sistema de software. No contexto do desenvolvimento do projeto, esses padrões oferecem uma base sólida para implementar funcionalidades complexas. Os elementos do mod exigem um sistema bem organizado para gerenciar o fluxo de dados, decisões lógicas e a comunicação eficiente entre componentes.
 
+&emsp;&emsp;
 O uso dos padrões comportamentais no mod busca garantir que as funcionalidades sejam implementadas de forma flexível, permitindo sua expansão futura e mantendo a jogabilidade intuitiva para os usuários. Eles auxiliam na criação de sistemas dinâmicos, nos quais as ações dos jogadores e os eventos do jogo interagem harmoniosamente com os novos elementos introduzidos.
 </div>
 
@@ -31,9 +33,19 @@ Os objetivos da utilização de padrões comportamentais no desenvolvimento do m
 - Se desejarem, podem citar os desafios encontrados seguindo a metodologia, propostas de melhoria, etc.
 -->
 
-<div align="justify">&emsp;&emsp;
-Para o desenvolvimento do mod, a aplicação dos padrões comportamentais, como o Strategy, foi integrada desde o início do processo de design. Após a definição dos requisitos e a modelagem das funcionalidades, padrões específicos foram selecionados para abordar desafios comportamentais do sistema. O desenvolvimento foi acompanhado por testes contínuos para verificar a conformidade das interações e comportamentos do sistema. A equipe utilizou ferramentas de versionamento e documentação para assegurar a rastreabilidade das decisões e a manutenção futura do projeto.
+<div align="justify">
+
+&emsp;&emsp;
+Inicialmente, dividimos as funcionalidades do projeto em quatro categorias. Cada subgrupo foi designado a uma funcionalidade proporcional ao seu nível de dificuldade, de modo a manter um equilíbrio no trabalho entre as equipes. Os subgrupos tiveram a liberdade de escolher e implementar o padrão de projeto (GoF) comportamental que considerassem mais adequado. A seguir, apresentamos a tabela com os integrantes de cada subgrupo, suas respectivas responsabilidades e os padrões de projeto utilizados:
 </div>
+
+
+| Grupo | Alunos                                                      | Responsabilidade           | GOF                                                        |
+|-------|-------------------------------------------------------------|----------------------------|------------------------------------------------------------|
+| 1     | André Silva, Artur Bartz, Samara Santos e Thomas Alves      | Portas lógica e antena     |                                                            |
+| 2     | Carlos Rodrigues, Danilo Melo e Patrícia Silva              | Livro Guia e Minimapa      |                                                            |
+| 3     | Cássio Reis, Vinicius Santos, Sunamita Santos                            | Bloco clocker e mineradora | [Strategy - Robô de Mineração](/Projeto/MiningStrategy.md) |
+| 4     | Eduardo Sandes, Gabriela Lemos e João Carvalho | Itens (todos os itens)     | [Strategy - Item](/Projeto/StrategyRegister.md)            |
 
 
 ## Conclusão
@@ -43,11 +55,14 @@ Para o desenvolvimento do mod, a aplicação dos padrões comportamentais, como 
 -   **Apresente perspectivas para melhorias ou trabalhos futuros.**
 -->
 
-<div align="justify">&emsp;&emsp;
+<div align="justify">
+&emsp;&emsp;
 A utilização dos padrões comportamentais do GoF foi essencial para o desenvolvimento de um mod dinâmico e funcional. Esses padrões permitiram a criação de sistemas flexíveis e bem organizados, que respondem eficientemente às ações dos jogadores e aos eventos do jogo.
 
+&emsp;&emsp;
 A aplicação do Strategy e outros padrões comportamentais simplificou a complexidade das interações entre os componentes, garantindo uma integração harmoniosa das novas funcionalidades ao sistema existente. Essa abordagem não apenas melhorou a experiência dos jogadores, mas também facilitou o trabalho dos desenvolvedores na manutenção e expansão do mod.
 
+&emsp;&emsp;
 Com base nesse projeto, é possível afirmar que os padrões comportamentais são ferramentas indispensáveis para o desenvolvimento de sistemas complexos e interativos. Eles demonstram como boas práticas de design podem ser aplicadas a cenários de modificação de jogos, contribuindo tanto para a qualidade do software quanto para a inovação na jogabilidade.
 </div>
 
@@ -74,7 +89,7 @@ Com base nesse projeto, é possível afirmar que os padrões comportamentais sã
 <div style="margin: 0 auto; width: fit-content;">
 
 | Matrícula | Aluno                                 | Git                                                           |
-| --------- | ------------------------------------- | ------------------------------------------------------------- |
+| --------- | ------------------------------------- |---------------------------------------------------------------|
 | 221007813 | André Emanuel Bispo da Silva          | [Hunter104](https://github.com/Hunter104)                     |
 | 221007869 | Artur Henrique Holz Bartz             | [H0lzz](https://github.com/H0lzz)                             |
 | 221931265 | Carlos Eduardo Rodrigues              | [carlos-kadu](https://github.com/carlos-kadu)                 |
@@ -82,7 +97,7 @@ Com base nesse projeto, é possível afirmar que os padrões comportamentais sã
 | 221031149 | Danilo César Tertuliano Melo          | [DaniloCTM](https://github.com/DaniloCTM)                     |
 | 221008024 | Eduardo Matheus dos Santos Sandes     | [DiceRunner714](https://github.com/DiceRunner714)             |
 | 170010872 | Gabriela de Oliveira Lemos            | [heylisten64](https://github.com/heylisten64)                 |
-| 221008150 | João Antonio Ginuino Carvalho         | [joaoseisei](https://github.com/joaoseisei)                   |
+| 221008150 | João Antonio Ginuino Carvalho         | [i-JSS](https://github.com/i-JSS)                             |
 | 221037993 | Patrícia Helena Macedo da Silva       | [patyhelenaa](https://github.com/patyhelenaa)                 |
 | 221008445 | Samara Letícia Alves dos Santos       | [samarawwleticia](https://github.com/samarawwleticia)         |
 | 221008697 | Sunamita Vitória Rodrigues dos Santos | [sunamit](https://github.com/sunamit)                         |
@@ -104,14 +119,14 @@ Com base nesse projeto, é possível afirmar que os padrões comportamentais sã
 
 <div style="margin: 0 auto; width: fit-content;">
 
-| Versão | Data da alteração |            Alteração            |                  Responsável                  |                      Revisor                       | Data de revisão |
-| :----: | :---------------: | :-----------------------------: | :-------------------------------------------: | :------------------------------------------------: | :-------------: |
-|  1.0   |       11/12       |      Criação do documento       |    [Artur Barlz](https://github.com/H0lzz)    |                                                    |                 | 
+| Versão | Data da alteração |            Alteração            |                  Responsável                  |                  Revisor                  | Data de revisão |
+| :----: | :---------------: | :-----------------------------: | :-------------------------------------------: |:-----------------------------------------:| :-------------: |
+|  1.0   |       11/12       |      Criação do documento       |    [Artur Barlz](https://github.com/H0lzz)    | [João Antonio G. Carvalho](https://github.com/i-JSS)  | 05/01                 | 
 
 </div>
 
 ## Controle de Revisão
 
-|                        Revisor(es)                        |                                             O que foi realizado                                             |
-|:---------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------:|
-|                                                           |                                                                                                             |
+|                        Revisor(es)                        |  O que foi realizado |
+|:---------------------------------------------------------:|:--------------------:|
+| [João Antonio G. Carvalho](https://github.com/i-JSS)                                                           | Atualiza metodologia |
