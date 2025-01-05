@@ -309,6 +309,7 @@ que o objeto clonado nao compartilhe referências com o protótipo, sendo assim 
 nova instância.
 </div>
 
+
 ### Versões Anteriores
 
 <details>
