@@ -27,23 +27,25 @@ Durante a fase de implementação, notamos não só os itens, mas também as fer
 
 ### Interface: StrategyRegister
 ```java
-package com.example;
+package com.logic_thinkering.itens;
 
+import com.logic_thinkering.LogicThinkeringItemGroup;
 import net.minecraft.item.Item;
 
 public interface StrategyRegister {
     default void insertOnGroup(Item item) {
-        ModItemGroup.addItem(item);
+        LogicThinkeringItemGroup.addItem(item);
     }
     Item register(String id);
-    Item register(String id, String material, String type);
+    Item register(String id, Material material, String type);
 }
 ```
 
 ### Classe: ConcreteRegisterItem
 ```java
-package com.example;
+package com.logic_thinkering.itens;
 
+import com.logic_thinkering.Main;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -58,7 +60,7 @@ public class ConcreteRegisterItem implements StrategyRegister {
 
     @Override
     public Item register(String id) {
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ExampleMod.MOD_ID, id));
+        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Main.MOD_ID, id));
         Function<Item.Settings, Item> factory = Item::new;
         Item item = factory.apply(new Item.Settings().registryKey(key));
         if (item instanceof BlockItem blockItem) blockItem.appendBlocks(Item.BLOCK_ITEMS, item);
@@ -68,7 +70,7 @@ public class ConcreteRegisterItem implements StrategyRegister {
     }
 
     @Override
-    public Item register(String id, String material, String type) {
+    public Item register(String id, Material material, String type) {
         throw new UnsupportedOperationException("Register with material and type is not supported for generic items.");
     }
 
@@ -77,13 +79,17 @@ public class ConcreteRegisterItem implements StrategyRegister {
 
 ### Classe: ConcreteRegisterTool
 ```java
-package com.example;
+package com.logic_thinkering.itens;
 
+import com.logic_thinkering.Main;
 import net.minecraft.item.*;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
@@ -96,27 +102,30 @@ public class ConcreteRegisterTool implements StrategyRegister {
     }
 
     @Override
-    public Item register(String id, String material, String type) {
-        Function<Item.Settings, Item> factory = (settings) -> {
-            ToolMaterial materialtool = MateriaisFerramenta.valueOf(material);
+    public Item register(String id, Material material, String type) {
 
-            return switch (type) {
-                case "SWORD" -> new SwordItem(materialtool, 3, -1.9F, settings);
-                case "AXE" -> new AxeItem(materialtool, 6, -2.7F, settings);
-                case "PICKAXE" -> new PickaxeItem(materialtool, 1, -2.8F, settings);
-                case "SHOVEL" -> new ShovelItem(materialtool, 1.5F, -3.0F, settings);
-                case "HOE" -> new HoeItem(materialtool, -3, 0.0F, settings);
-                default -> throw new IllegalStateException("Unexpected value: " + type);
+        if (material instanceof LogicThinkeringToolMaterial materialtool) {
+            Function<Item.Settings, Item> factory = (settings) -> {
+
+                return switch (type) {
+                    case "SWORD" -> new SwordItem(materialtool.getMaterial(), 3, -1.9F, settings);
+                    case "AXE" -> new AxeItem(materialtool.getMaterial(), 6, -2.7F, settings);
+                    case "PICKAXE" -> new PickaxeItem(materialtool.getMaterial(), 1, -2.8F, settings);
+                    case "SHOVEL" -> new ShovelItem(materialtool.getMaterial(), 1.5F, -3.0F, settings);
+                    case "HOE" -> new HoeItem(materialtool.getMaterial(), -3, 0.0F, settings);
+                    default -> throw new IllegalStateException("Unexpected value: " + type);
+                };
             };
 
-        };
+            RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Main.MOD_ID, id));
+            Item.Settings settings = new Item.Settings();
+            Item item = factory.apply(settings.registryKey(key));
+            Item result = Registry.register(Registries.ITEM, key, item);
+            insertOnGroup(result);
+            return(result);
+        }
+        else throw new IllegalArgumentException("Material must be an instance of ToolMaterial");
 
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ExampleMod.MOD_ID, id));
-        Item.Settings settings = new Item.Settings();
-        Item item = factory.apply(settings.registryKey(key));
-        Item result = Registry.register(Registries.ITEM, key, item);
-        insertOnGroup(result);
-        return(result);
     }
 
 }
@@ -124,8 +133,9 @@ public class ConcreteRegisterTool implements StrategyRegister {
 
 ### Classe: ConcreteRegisterArmor
 ```java
-package com.example;
+package com.logic_thinkering.itens;
 
+import com.logic_thinkering.Main;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.equipment.EquipmentType;
@@ -145,18 +155,23 @@ public class ConcreteRegisterArmor implements StrategyRegister {
     }
 
     @Override
-    public Item register(String id, String material, String type) {
-        Function<Item.Settings, Item> factory = (settings) -> new ArmorItem(
-                ModArmorMaterial.valueOf(material),
-                EquipmentType.valueOf(type),
-                settings);
+    public Item register(String id, Material material, String type) {
 
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ExampleMod.MOD_ID, id));
-        Item.Settings settings = new Item.Settings();
-        Item item = factory.apply(settings.registryKey(key));
-        Item result = Registry.register(Registries.ITEM, key, item);
-        insertOnGroup(result);
-        return(result);
+        if (material instanceof LogicThinkeringArmorMaterial materialArmadura) {
+            Function<Item.Settings, Item> factory = (settings) -> new ArmorItem(
+                    materialArmadura.getMaterial(),
+                    EquipmentType.valueOf(type),
+                    settings);
+
+            RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Main.MOD_ID, id));
+            Item.Settings settings = new Item.Settings();
+            Item item = factory.apply(settings.registryKey(key));
+            Item result = Registry.register(Registries.ITEM, key, item);
+            insertOnGroup(result);
+            return result;
+        }
+
+        else throw new IllegalArgumentException("Material must be an instance of MaterialArmadura");
     }
 }
 ```

@@ -38,6 +38,7 @@ O principal objetivo é facilitar a composição e organização de classes e ob
 Inicialmente, dividimos as funcionalidades do projeto em quatro categorias. Cada subgrupo foi designado a uma funcionalidade proporcional ao seu nível de dificuldade, de modo a manter um equilíbrio no trabalho entre as equipes. Os subgrupos tiveram a liberdade de escolher e implementar o padrão de projeto (GoF) estrutural que considerassem mais adequado. A seguir, apresentamos a tabela com os integrantes de cada subgrupo, suas respectivas responsabilidades e os padrões de projeto utilizados:
 </div>
 
+<div style="margin: 0 auto; width: fit-content;">
 
 | Grupo | Alunos                                                      | Responsabilidade           | GOF                                  |
 |-------|-------------------------------------------------------------|----------------------------|--------------------------------------|
@@ -45,6 +46,8 @@ Inicialmente, dividimos as funcionalidades do projeto em quatro categorias. Cada
 | 2     | Carlos Rodrigues, Danilo Melo e Patrícia Silva              | Livro Guia e Minimapa      |                                      |
 | 3     | Vinicius Santos, Sunamita Santos                            | Bloco clocker e mineradora |                                      |
 | 4     | Cássio Reis, Eduardo Sandes, Gabriela Lemos e João Carvalho | Itens (todos os itens)     | [Bridge](/Projeto/BridgeMaterial.md) |
+
+</div>
 
 
 ## Conclusão

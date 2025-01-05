@@ -50,6 +50,7 @@ Para a equipe, a adoção de padrões criacionais auxilia na padronização de p
 Inicialmente, dividimos as funcionalidades do projeto em quatro categorias. Cada subgrupo foi designado a uma funcionalidade proporcional ao seu nível de dificuldade, de modo a manter um equilíbrio no trabalho entre as equipes. Os subgrupos tiveram a liberdade de escolher e implementar o padrão de projeto (GoF) criacional que considerassem mais adequado. A seguir, apresentamos a tabela com os integrantes de cada subgrupo, suas respectivas responsabilidades e os padrões de projeto utilizados:
 </div>
 
+<div style="margin: 0 auto; width: fit-content;">
 
 | Grupo | Alunos                                                 | Responsabilidade           | GOF                                    |
 |-------|--------------------------------------------------------|----------------------------|----------------------------------------|
@@ -57,6 +58,8 @@ Inicialmente, dividimos as funcionalidades do projeto em quatro categorias. Cada
 | 2     | Carlos Rodrigues, Danilo Melo e Patrícia Silva         | Livro Guia e Minimapa      |                                        |
 | 3     | Cássio Reis, Vinicius Santos, Sunamita Santos          | Bloco clocker e mineradora | [Factory Method](/Projeto/FactoryMethod.md)   |
 | 4     | Eduardo Sandes, Gabriela Lemos e João Carvalho         | Itens (todos os itens)     | [Prototype](/Projeto/PrototypeItem.md) |
+
+</div>
 
 
 ## Conclusão
