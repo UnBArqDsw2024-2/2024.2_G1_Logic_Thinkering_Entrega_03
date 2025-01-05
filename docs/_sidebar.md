@@ -36,6 +36,7 @@
         - [Bibliografia](Projeto/FactoryMethod.md#bibliografia)
         - [Participantes](Projeto/FactoryMethod.md#participantes)
         - [Histórico de Versão](Projeto/FactoryMethod.md#histórico-de-versão)
+      - [3.1.3 Builder](/Projeto/Builder.md)
     - [3.2. Padrões de Projeto GoFs Estruturais](Projeto/GoFsEstruturais.md)
       - [3.2.1 Bridge - Materiais](Projeto/BridgeMaterial.md)
         - [Objetivo](Projeto/BridgeMaterial.md#objetivo)
@@ -53,6 +54,7 @@
         - [Bibliografia](Projeto/BridgeMaterial.md#bibliografia)
         - [Participantes](Projeto/BridgeMaterial.md#participantes)
         - [Histórico de Versão](Projeto/BridgeMaterial.md#histórico-de-versão)
+      - [3.2.2 Decorador](Projeto/Decorador.md)
     - [3.3. Padrões de Projeto GoFs Comportamentais](Projeto/GoFsComportamentais.md)
       - [3.3.1 Strategy - Item](Projeto/StrategyRegister.md)
         - [Objetivo](Projeto/StrategyRegister.md#objetivo)
@@ -80,6 +82,7 @@
         - [Bibliografia](Projeto/MiningStrategy.md#bibliografia)
         - [Participantes](Projeto/MiningStrategy.md#participantes)
         - [Histórico de Versão](Projeto/MiningStrategy.md#histórico-de-versão)
+        - [3.3.3 Strategy - Portas Lógicas](Projeto/LogicStrategy.md)
     - [3.4. Participações - Padrões de Projeto](PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](PadroesDeProjeto/3.5.IniciativasExtras.md)
       

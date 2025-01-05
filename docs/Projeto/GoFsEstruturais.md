@@ -42,7 +42,7 @@ Inicialmente, dividimos as funcionalidades do projeto em quatro categorias. Cada
 
 | Grupo | Alunos                                                      | Responsabilidade           | GOF                                  |
 |-------|-------------------------------------------------------------|----------------------------|--------------------------------------|
-| 1     | André Silva, Artur Bartz, Samara Santos e Thomas Alves      | Portas lógica e antena     |                                      |
+| 1     | André Silva, Artur Bartz, Samara Santos e Thomas Alves      | Portas lógica e antena     | [Decorator](/Projeto/Decorador.md)   |
 | 2     | Carlos Rodrigues, Danilo Melo e Patrícia Silva              | Livro Guia e Minimapa      |                                      |
 | 3     | Vinicius Santos, Sunamita Santos                            | Bloco clocker e mineradora |                                      |
 | 4     | Cássio Reis, Eduardo Sandes, Gabriela Lemos e João Carvalho | Itens (todos os itens)     | [Bridge](/Projeto/BridgeMaterial.md) |
