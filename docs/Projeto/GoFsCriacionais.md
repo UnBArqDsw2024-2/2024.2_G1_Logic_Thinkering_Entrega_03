@@ -52,12 +52,12 @@ Inicialmente, dividimos as funcionalidades do projeto em quatro categorias. Cada
 
 <div style="margin: 0 auto; width: fit-content;">
 
-| Grupo | Alunos                                                 | Responsabilidade           | GOF                                    |
-|-------|--------------------------------------------------------|----------------------------|----------------------------------------|
-| 1     | André Silva, Artur Bartz, Samara Santos e Thomas Alves | Portas lógica e antena     |                                        |
-| 2     | Carlos Rodrigues, Danilo Melo e Patrícia Silva         | Livro Guia e Minimapa      |                                        |
-| 3     | Cássio Reis, Vinicius Santos, Sunamita Santos          | Bloco clocker e mineradora | [Factory Method](/Projeto/FactoryMethod.md)   |
-| 4     | Eduardo Sandes, Gabriela Lemos e João Carvalho         | Itens (todos os itens)     | [Prototype](/Projeto/PrototypeItem.md) |
+| Grupo | Alunos                                                 | Responsabilidade           | GOF                                         |
+|-------|--------------------------------------------------------|----------------------------|---------------------------------------------|
+| 1     | André Silva, Artur Bartz, Samara Santos e Thomas Alves | Portas lógica e antena     | [Builder](/Projeto/Builder.md)              |
+| 2     | Carlos Rodrigues, Danilo Melo e Patrícia Silva         | Livro Guia e Minimapa      |                                             |
+| 3     | Cássio Reis, Vinicius Santos, Sunamita Santos          | Bloco clocker e mineradora | [Factory Method](/Projeto/FactoryMethod.md) |
+| 4     | Eduardo Sandes, Gabriela Lemos e João Carvalho         | Itens (todos os itens)     | [Prototype](/Projeto/PrototypeItem.md)      |
 
 </div>
 

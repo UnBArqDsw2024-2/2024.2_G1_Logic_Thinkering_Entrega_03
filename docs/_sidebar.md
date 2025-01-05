@@ -36,6 +36,7 @@
         - [Bibliografia](Projeto/FactoryMethod.md#bibliografia)
         - [Participantes](Projeto/FactoryMethod.md#participantes)
         - [Histórico de Versão](Projeto/FactoryMethod.md#histórico-de-versão)
+      - [3.1.1 Builder](/Projeto/Builder.md)
     - [3.2. Padrões de Projeto GoFs Estruturais](Projeto/GoFsEstruturais.md)
       - [3.2.1 Bridge - Materiais](Projeto/BridgeMaterial.md)
         - [Objetivo](Projeto/BridgeMaterial.md#objetivo)
