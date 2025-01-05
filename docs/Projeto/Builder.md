@@ -290,10 +290,9 @@ Em suma foram utilizadas quatro classes para aplicar o padrão builder para regi
 
 <div style="margin: 0 auto; width: fit-content;">
 
-|  Versão   |      Data da alteração       |                 Alteração                 |                Responsável                | Revisor | Data de revisão |
-|:---------:|:----------------------------:|:-----------------------------------------:|:-----------------------------------------:|:-------:|:---------------:|
-| 221007813 | André Emanuel Bispo da Silva | [Hunter104](https://github.com/Hunter104) |
-|    1.0    |            05/01             |       André Emanuel Bispo da Silva        | [Hunter104](https://github.com/Hunter104) |         |
+|  Versão   |      Data da alteração       |      Alteração       |                         Responsável                          | Revisor | Data de revisão |
+|:---------:|:----------------------------:|:--------------------:|:------------------------------------------------------------:|:-------:|:---------------:|
+|    1.0    |            05/01             | Criação do documento | [André Emanuel Bispo da Silva](https://github.com/Hunter104) |         |
 
 </div>
 
