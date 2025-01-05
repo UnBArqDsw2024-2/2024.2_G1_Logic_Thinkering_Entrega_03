@@ -82,7 +82,7 @@
         - [Bibliografia](Projeto/MiningStrategy.md#bibliografia)
         - [Participantes](Projeto/MiningStrategy.md#participantes)
         - [Histórico de Versão](Projeto/MiningStrategy.md#histórico-de-versão)
-        - [3.3.3 Strategy - Portas Lógicas](Projeto/LogicStrategy.md)
+      - [3.3.3 Strategy - Portas Lógicas](Projeto/LogicStrategy.md)
     - [3.4. Participações - Padrões de Projeto](PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](PadroesDeProjeto/3.5.IniciativasExtras.md)
       
