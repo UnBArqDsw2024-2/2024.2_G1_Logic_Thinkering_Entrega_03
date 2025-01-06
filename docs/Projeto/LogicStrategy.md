@@ -1,16 +1,19 @@
 # Strategy - Portas Lógicas
 
 ## Introdução
+
 <div align="justify">
 Este documento apresenta o padrão de projeto Strategy das portas lógicas, um padrão de projeto que permitem definir uma família de algoritmos que podem ser trocados entre sí¹. permitindo maior flexibilidade em escolha de algoritmos que resolvem o mesmo problema.
 </div>
 
 ## Objetivo
+
 <div align="justify">
 O objetivo do strategy é permitir que um conjunto de algoritmos seja definido e encapsulado separadamente de forma que a escolha de qual será usado possa ser feita em tempo de execução. Resumidamente, o strategy promove a separação entre o comportamento de uma classe e a lógica que a implementa.
 </div>
 
 ## Metodologia
+
 <div align="justify">
 No processo de desenvolvimento das portas lógicas foi notada a necessidade de uma interface simples para a função lógica utilizada por uma porta lógica, devido a sua simplicidade e genericidade entre as diferentes portas lógicas. Assim, foi criada um classe LogicStrategy, utilizada pela classe abstrata de portas lógicas para evaluar a função lógica. Implementada por cada tipo de função lógica
 </div>
@@ -50,6 +53,7 @@ class NORStrategy : LogicStrategy {
 ```
 
 ### Classe: NOTStrategy
+
 ```kotlin
 class NOTStrategy : LogicStrategy {
     override fun getOutput(inputPower: InputPower) = !inputPower.south
@@ -166,14 +170,17 @@ abstract class AbstractLogicGate(settings: Settings, val logicStrategy: LogicStr
     }
 }
 ```
+
 ### Modelagem
+
 <center>
 Figura 1 - Strategy
 
 ![Diagrama de Classes - Estratégia de Lógica](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/strategy_logica.png)
 
- <b>Fonte:</b> Silva, André, 2025.
- A implementação do padrão Strategy permitiu uma interface flexível para a criação de funções lógicas, permitindo a criação de várias portas lógicas intercambiáveis
+<b>Fonte:</b> Silva, André, 2025.
+A implementação do padrão Strategy permitiu uma interface flexível para a criação de funções lógicas, permitindo a criação de várias portas lógicas intercambiáveis
+
 </center>
 
 ## Conclusão
@@ -191,8 +198,8 @@ A aplicação do padrão Strategy na implementação da lógica booleana minera�
 ## Bibliografia
 
 <!-- - **Altere!**-->
-> [1] REFACTORING GURU. Builder. Disponível em: <https://refactoring.guru/design-patterns/builder>.
 
+> [1] REFACTORING GURU. Builder. Disponível em: <https://refactoring.guru/design-patterns/builder>.
 
 <center>
 
@@ -205,8 +212,9 @@ A aplicação do padrão Strategy na implementação da lógica booleana minera�
 <div style="margin: 0 auto; width: fit-content;">
 
 | Matrícula | Aluno                        | Git                                       |
-|-----------|------------------------------|-------------------------------------------|
+| --------- | ---------------------------- | ----------------------------------------- |
 | 221007813 | André Emanuel Bispo da Silva | [Hunter104](https://github.com/Hunter104) |
+| 211062526 | Thomas Queiroz Souza Alves   | [Thomas Q](https://github.com/Hunter104)  |
 
 </div>
 
@@ -224,13 +232,13 @@ A aplicação do padrão Strategy na implementação da lógica booleana minera�
 <div style="margin: 0 auto; width: fit-content;">
 
 | Versão | Data da alteração |      Alteração       |                         Responsável                          | Revisor | Data de revisão |
-|:------:|:-----------------:|:--------------------:|:------------------------------------------------------------:|:-------:|:---------------:|
+| :----: | :---------------: | :------------------: | :----------------------------------------------------------: | :-----: | :-------------: |
 |  1.0   |       05/01       | Criação do documento | [André Emanuel Bispo da Silva](https://github.com/Hunter104) |         |                 |
 
 </div>
 
 ## Controle de Revisão
 
-|                        Revisor(es)                        | O que foi realizado |
-| :-------------------------------------------------------: |:-------------------:|
-| |                     |
+| Revisor(es) | O que foi realizado |
+| :---------: | :-----------------: |
+|             |                     |
