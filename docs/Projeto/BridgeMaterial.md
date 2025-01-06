@@ -425,6 +425,7 @@ Figura 1 - Bridge
 | 221008024 | Eduardo Matheus dos Santos Sandes | [DiceRunner714](https://github.com/DiceRunner714) |
 | 170010872 | Gabriela de Oliveira Lemos        | [heylisten64](https://github.com/heylisten64)     |
 | 221008150 | João Antonio Ginuino Carvalho     | [i-JSS](https://github.com/i-JSS)       |
+| 202017263 | Vinicius de Oliveira Santos     | [ViniciussdeOliveira](https://github.com/ViniciussdeOliveira)     |
 
 </div>
 
