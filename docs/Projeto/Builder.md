@@ -13,6 +13,7 @@ O objetivo do builder é simplificar a criação de objetos complexos, com vári
 </div>
 
 ## Metodologia
+
 <div align="justify">&emsp;&emsp; Foram criadas classes chamadas BlockRegistryHelper e ItemRegitryHelper para simplificar o registro de vários blocos através de um API simples, pois o registro de vários blocos é verboso e complicado. Como a classe é complexa cada classe é acompanhada de um builder, que especifica uma API simples para criação dos objetos.
 
 ## Resultados
@@ -43,7 +44,6 @@ implementação do padrão Builder permitiu uma interface simplificada para a cr
 Em suma foram utilizadas quatro classes para aplicar o padrão builder para registro de itens e blocos. De acordo com o esperado, a classe builder simplificou a criação dos objetos ajudadores. Além disso, as classes poderiam ser melhoradas no futuro quanto mais necessidades podem aparecer para o registro de itens, como diferentes grupos para diferentes itens, e não só um grupo para todos os itens, adição de múltiplos decoradores, e outras melhorias de flexibilidade
 </div>
 
-
 ## Bibliografia
 
 <!-- - **Altere!**-->
@@ -51,6 +51,7 @@ Em suma foram utilizadas quatro classes para aplicar o padrão builder para regi
 > [1] REFACTORING GURU. Builder. Disponível em: <https://refactoring.guru/design-patterns/builder>.
 
 ‌
+
 <center>
 
 ## Participantes
@@ -62,8 +63,9 @@ Em suma foram utilizadas quatro classes para aplicar o padrão builder para regi
 <div style="margin: 0 auto; width: fit-content;">
 
 | Matrícula | Aluno                        | Git                                       |
-|-----------|------------------------------|-------------------------------------------|
+| --------- | ---------------------------- | ----------------------------------------- |
 | 221007813 | André Emanuel Bispo da Silva | [Hunter104](https://github.com/Hunter104) |
+| 211062526 | Thomas Queiroz Souza Alves   | [Thomas Q](https://github.com/Hunter104)  |
 
 </div>
 
@@ -80,14 +82,14 @@ Em suma foram utilizadas quatro classes para aplicar o padrão builder para regi
 
 <div style="margin: 0 auto; width: fit-content;">
 
-|  Versão   |      Data da alteração       |      Alteração       |                         Responsável                          | Revisor | Data de revisão |
-|:---------:|:----------------------------:|:--------------------:|:------------------------------------------------------------:|:-------:|:---------------:|
-|    1.0    |            05/01             | Criação do documento | [André Emanuel Bispo da Silva](https://github.com/Hunter104) |         |
+| Versão | Data da alteração |      Alteração       |                         Responsável                          | Revisor | Data de revisão |
+| :----: | :---------------: | :------------------: | :----------------------------------------------------------: | :-----: | :-------------: |
+|  1.0   |       05/01       | Criação do documento | [André Emanuel Bispo da Silva](https://github.com/Hunter104) |         |                 |
 
 </div>
 
 ## Controle de Revisão
 
 | Revisor(es) | O que foi realizado |
-|:-----------:|:-------------------:|
+| :---------: | :-----------------: |
 |             |                     |
