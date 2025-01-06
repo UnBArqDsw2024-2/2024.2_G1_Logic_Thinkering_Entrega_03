@@ -271,6 +271,34 @@ Figura 1 - Strategy
  <b>Fonte:</b> Reis, Santos, 2025.
 </center>
 
+<div align="justify">&emsp;&emsp; 
+A implementação do padrão Strategy no robô de mineração resultou em uma solução altamente flexível e modular, permitindo a adaptação dinâmica a diferentes estratégias de mineração, como mineração em raio e em linha. A Figura 1 apresenta o diagrama UML que descreve a relação entre as classes e interfaces envolvidas, destacando como o padrão foi utilizado para separar os comportamentos de mineração. Essa abordagem não apenas simplificou o código, mas também facilitou a adição de novas estratégias no futuro sem alterações significativas nas demais classes. Durante o processo de desenvolvimento, identificamos a importância de encapsular as estratégias e utilizá-las de maneira independente, garantindo maior reutilização e manutenção do código.
+</div>
+
+### Requisitos Elicitados
+<center> <b>Tabela 01</b> - Requisitos Elicitados no artefato <b>Brainstorming</b></center>
+
+| ID    | Descrição                                                                                                                         |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------- |
+| RF16  | Adicionar robôs de mineração                                                                                                      |
+| RF18  | Os robôs de mineração devem minerar somente o que o jogador configurar                                                            |
+| RNF02 | As novas mecânicas e blocos não devem impactar significativamente o desempenho do jogo, mesmo em servidores com muitos jogadores. |
+| RNF05 | Utilizar imagens, ícones e texturas objetivas.                                                                                    |
+
+<!-- no caso da entrega 02-->
+
+### Requisitos Modelados
+<center> <b>Tabela 01</b> - Requisitos Modelados no artefato <b>Diagrama de Classes</b></center>
+
+| ID    | Descrição                                                                                                                        | Origem                                                                                                                      |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| RF16  | Adicionar robôs de mineração                                                                                                     | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+| RF18  | Os robôs de mineração devem minerar somente o que o jogador configurar                                                           | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+| RNF02 | As novas mecânicas e blocos não devem impactar significativamente o desempenho do jogo, mesmo em servidores com muitos jogadores | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+| RNF05 | Utilizar imagens, ícones e texturas objetivas                                                                                    | [Brainstorming](https://unbarqdsw2024-2.github.io/2024.2_G1_Logic_Thinkering_Entrega_01/#/Base/Design_Sprint/brainstorming) |
+
+<!-- atençao de respeitas os IDS de cada requisito!! o documento backward from pode ajudar-->
+
 ## Conclusão
 
 <!--
@@ -280,7 +308,7 @@ Figura 1 - Strategy
 -->
 
 <div align="justify">&emsp;&emsp;
-A aplicação do padrão Strategy na implementação da lógica de mineração do robô de mineração provou ser uma abordagem eficaz para lidar com os diferentes tipos de estratégias de mineração que o robô pode adotar. Com a separação das lógicas de mineração em classes distintas, foi possível garantir flexibilidade na escolha e alteração das estratégias de mineração, como mineração em linha ou em área, sem comprometer a estrutura do código. Esse design também permite futuras expansões, como a adição de novas estratégias, sem a necessidade de modificar as partes centrais do sistema.
+A aplicação do padrão Strategy na implementação da lógica de mineração do robô de mineração provou ser uma abordagem eficaz para lidar com os diferentes tipos de estratégias/comportamentos de mineração que o robô pode adotar. Com a separação das lógicas de mineração em classes distintas, foi possível garantir flexibilidade na escolha e alteração das estratégias de mineração, como mineração em linha ou em área, sem comprometer a estrutura do código. Esse design também permite futuras expansões, como a adição de novas estratégias, sem a necessidade de modificar as partes centrais do mod.
 </div>
 
 ## Bibliografia
@@ -319,14 +347,16 @@ A aplicação do padrão Strategy na implementação da lógica de mineração d
 
 <div style="margin: 0 auto; width: fit-content;">
 
-| Versão | Data da alteração |      Alteração       |                                                                           Responsável                                                                           | Revisor | Data de revisão |
-|:------:|:-----------------:| :------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: | :-------------: |
-|  1.0   |       04/01       | Criação do documento | [Cássio Sousa dos Reis](https://github.com/csreis72) |         |                 |
+| Versão | Data da alteração |      Alteração       |                     Responsável                      |                      Revisor                       | Data de revisão |
+| :----: | :---------------: | :------------------: | :--------------------------------------------------: | :------------------------------------------------: | :-------------: |
+|  1.0   |    04/01/2025     | Criação do documento | [Cássio Sousa dos Reis](https://github.com/csreis72) | [Eduardo Sandes](https://github.com/DiceRunner714) |   05/01/2025    |
+|        |                   |                      |                                                      |                                                    |                 |
 
 </div>
 
 ## Controle de Revisão
 
-|                        Revisor(es)                        | O que foi realizado |
-| :-------------------------------------------------------: |:-------------------:|
-| |                     |
+|                    Revisor(es)                     |                             O que foi realizado                             |
+| :------------------------------------------------: | :-------------------------------------------------------------------------: |
+| [Eduardo Sandes](https://github.com/DiceRunner714) | Adiciona ano ao documento, tabela de requisitos e parágrafo nos resultados. |
+|                                                    |                                                                             |
