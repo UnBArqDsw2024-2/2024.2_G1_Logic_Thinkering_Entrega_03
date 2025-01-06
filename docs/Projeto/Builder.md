@@ -84,7 +84,7 @@ Em suma foram utilizadas quatro classes para aplicar o padrão builder para regi
 
 | Versão | Data da alteração |      Alteração       |                         Responsável                          | Revisor | Data de revisão |
 | :----: | :---------------: | :------------------: | :----------------------------------------------------------: | :-----: | :-------------: |
-|  1.0   |       05/01       | Criação do documento | [André Emanuel Bispo da Silva](https://github.com/Hunter104) |         |                 |
+|  1.0   |       05/01       | Criação do documento | [André Emanuel Bispo da Silva](https://github.com/Hunter104) | [Patricia Silva](https://github.com/patyhelenaa)        |   06/01/2025              |
 
 </div>
 
@@ -92,4 +92,4 @@ Em suma foram utilizadas quatro classes para aplicar o padrão builder para regi
 
 | Revisor(es) | O que foi realizado |
 | :---------: | :-----------------: |
-|             |                     |
+|      | [Patricia Silva](https://github.com/patyhelenaa)       |        Adiçao dos links para cada subtópico             |
