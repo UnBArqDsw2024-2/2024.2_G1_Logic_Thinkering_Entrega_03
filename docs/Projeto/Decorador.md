@@ -162,7 +162,7 @@ Em suma foi utilizada uma classe "embalagem" que altera a funcionalidade das por
 | :---------: | :-----------------: |
 |             |                     |
 
-# Decorador do logger
+# Decorador das armas
 
 ## Introdução
 
