@@ -90,6 +90,7 @@ Em suma foram utilizadas quatro classes para aplicar o padrão builder para regi
 
 ## Controle de Revisão
 
-| Revisor(es) | O que foi realizado |
-| :---------: | :-----------------: |
-|      | [Patricia Silva](https://github.com/patyhelenaa)       |        Adiçao dos links para cada subtópico             |
+|                    Revisor(es)                     |                     O que foi realizado                      |
+| :------------------------------------------------: | :----------------------------------------------------------: |
+| [Patricia Silva](https://github.com/patyhelenaa) | Adição dos links para os subtópicos |
+|                                                    |                                                              |
