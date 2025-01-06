@@ -62,67 +62,13 @@ Após a inserção de cada padrão de projeto no diagrama original, foi gerado u
 -->
 
 <center>
-Figura 1 - Factory Method
+Figura 1 - Diagrama de Classes dos itens
 
 ![Modelagem - Factory Method](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/classitem.png)
 
  <b>Fonte:</b> Sandes, Lemos, Carvalho, 2025.
 </center>
 
-<div align="justify">&emsp;&emsp;
-COLOCAR O TEXTO AQUI DENTRO
-</div>
-
-### Versões Anteriores
-
-<details>
-<summary>Visualizar versão 1.2</summary>
-
-### Versão 1.2
-
-<!-- Aqui documente as mudanças de uma versão para a outra -->
-
-A Figura 1 apresenta não só o BPMN revisado como também alguns materiais utilizados durante sua confecção.
-
-<center><b>Figura 1 -</b> BPMN revisado versão 1.2</center>
-
-![Versao 1.2](../assets/BPMN/bpmn2.png)
-
-<center><b>Fonte:</b> Lemos, 2024.</center>
-
-</details>
-
-<details>
-<summary>Visualizar versão 1.1</summary>
-
-### Versão 1.1
-
-A Figura 2 apresenta não só o BPMN revisado como também alguns materiais utilizados durante sua confecção.
-
-<center><b>Figura 2 -</b> BPMN revisado versão 1.1</center>
-
-![Versao 1.1](../assets/BPMN/bpmnRevisado.jpg)
-
-<center><b>Fonte:</b> Silva, Lemos, Sandes, Carvalho, 2024.</center>
-
-</details>
-
-<details>
-<summary>Visualizar versão 1.0</summary>
-
-### Versão 1.0
-
-Primeira adaptação ao Bizagi pode ser vista na Figura 3.
-
-<center><b>Figura 3 -</b> BPMN adaptado ao Bizagi versão 1.0</center>
-
-![Versão 1.0](../assets/BPMN/BPMN.png)
-
-<center><b>Fonte:</b> Bartz, Rodrigues, Reis, Sandes, Lemos,  Carvalho, Silva, Santos, Alves, Santos, 2024.</center>
-
-</details>
-
-## Conclusão
 
 <!--
 -   **Resuma os pontos principais do trabalho.**
