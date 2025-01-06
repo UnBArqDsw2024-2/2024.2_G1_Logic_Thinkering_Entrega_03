@@ -46,9 +46,103 @@ Interagir com os objetos Component:
 A interação com a estrutura ocorre por meio da interface comum, sem distinção entre folhas e compositores.
 
 
-## Conclusões 
+## Resultados
+
+### Interface: BookComponent
+
+```java
+package com.logic_thinkering;
+
+interface BookComponent {
+    String getTitle();
+    String getText();
+    String getImagePath();
+}
+```
+
+### Classe: BookChapter
+
+```java
+package com.logic_thinkering;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class BookChapter implements BookComponent {
+    private final String title;
+    private final List<BookComponent> components = new ArrayList<>();
+
+    public BookChapter(String title) {
+        this.title = title;
+    }
+
+    public void addComponent(BookComponent component) {
+        components.add(component);
+    }
+
+    public List<BookComponent> getComponents() {
+        return components;
+    }
+
+    @Override
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public String getText() {
+        StringBuilder text = new StringBuilder();
+        for (BookComponent component : components) {
+            text.append(component.getText()).append("\n");
+        }
+        return text.toString();
+    }
+
+    @Override
+    public String getImagePath() {
+        return "";
+    }
+}
+```
+
+### Classe: BookPage
+
+```java
+package com.logic_thinkering;
+
+class BookPage implements BookComponent {
+    private final String title;
+    private final String text;
+    private final String imagePath;
+
+    public BookPage(String title, String text, String imagePath) {
+        this.title = title;
+        this.text = text;
+        this.imagePath = imagePath == null ? "" : imagePath;
+    }
+
+    @Override
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public String getText() {
+        return text;
+    }
+
+    @Override
+    public String getImagePath() {
+        return imagePath;
+    }
+}
+```
+
 
 ![Modelagem - Builder](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/CompositeBookGuide.png)
+
+
+## Conclusões 
 
 A aplicação do padrão Composite na estrutura do livro mostrou-se eficiente ao organizar capítulos e páginas de forma hierárquica e flexível. A abstração pela interface BookComponent simplifica a manipulação de diferentes componentes, promovendo modularidade e permitindo futuras expansões sem alterações na lógica central.
 
@@ -94,6 +188,7 @@ A aplicação do padrão Composite na estrutura do livro mostrou-se eficiente ao
 |  Versão   |      Data da alteração       |      Alteração       |                         Responsável                          | Revisor | Data de revisão |
 |:---------:|:----------------------------:|:--------------------:|:------------------------------------------------------------:|:-------:|:---------------:|
 |    1.0    |            05/01             | Criação do documento | [Danilo Melo](https://github.com/DaniloCTM) |         |
+|    2.0    |            05/01             | Adição dos códigos | [Carlos Rodrigues](https://github.com/Carlos-kadu) |         |
 
 </div>
 

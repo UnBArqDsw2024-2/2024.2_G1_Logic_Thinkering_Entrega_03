@@ -11,6 +11,140 @@
   Para a criação do diagrama, seguimos as videoaulas da professora e nos reunimos no discord, afim de realizar o trabalho em conjunto.
 
 ## Resultados
+
+### Interface: BookGuideBuilder
+
+```java
+package com.logic_thinkering;
+
+interface BookGuideBuilder {
+    void addPage(String title, String text, String imagePath);
+    BookGuide build();
+}
+```
+
+### Classe: BookGuideDirector
+
+```java
+package com.logic_thinkering;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookGuideDirector {
+    private BookGuideBuilder builder;
+
+    public BookGuideDirector(BookGuideBuilder builder) {
+        this.builder = builder;
+    }
+
+    public BookGuide construct() {
+        return builder.build();
+    }
+}
+```
+
+### Classe: StandardBookGuideBuilder
+
+```java
+package com.logic_thinkering;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class StandardBookGuideBuilder implements BookGuideBuilder {
+    private final List<BookPage> pages = new ArrayList<>();
+
+    @Override
+    public void addPage(String title, String text, String imagePath) {
+        pages.add(new BookPage(title, text, imagePath));
+    }
+
+    @Override
+    public BookGuide build() {
+        return new BookGuide(pages);
+    }
+}
+```
+
+### Classe: BookGuide
+
+```java
+package com.logic_thinkering;
+
+import java.util.List;
+
+class BookGuide {
+    private final List<BookPage> components;
+    private int currentPageIndex = 0;
+
+    public BookGuide(List<BookPage> components) {
+        this.components = components;
+    }
+
+    public BookComponent getCurrentComponent() {
+        return components.get(currentPageIndex);
+    }
+
+    public List<BookPage> getComponents() {
+        return components;
+    }
+
+    public boolean hasNextComponent() {
+        return currentPageIndex < components.size() - 1;
+    }
+
+    public boolean hasPreviousComponent() {
+        return currentPageIndex > 0;
+    }
+
+    public void nextComponent() {
+        if (hasNextComponent()) {
+            currentPageIndex++;
+        }
+    }
+
+    public void previousComponent() {
+        if (hasPreviousComponent()) {
+            currentPageIndex--;
+        }
+    }
+}
+```
+
+### Classe: BookPage
+
+```java
+package com.logic_thinkering;
+
+class BookPage implements BookComponent {
+    private final String title;
+    private final String text;
+    private final String imagePath;
+
+    public BookPage(String title, String text, String imagePath) {
+        this.title = title;
+        this.text = text;
+        this.imagePath = imagePath == null ? "" : imagePath;
+    }
+
+    @Override
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public String getText() {
+        return text;
+    }
+
+    @Override
+    public String getImagePath() {
+        return imagePath;
+    }
+}
+```
+
 ![Modelagem - Builder](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/BookGuide.png)
 
 ## Conclusões
@@ -54,6 +188,7 @@ O padrão Builder foi aplicado com sucesso para implementar o GuideBook, permiti
 |  Versão   |      Data da alteração       |      Alteração       |                         Responsável                          | Revisor | Data de revisão |
 |:---------:|:----------------------------:|:--------------------:|:------------------------------------------------------------:|:-------:|:---------------:|
 |    1.0    |            05/01             | Criação do documento | [Danilo Melo](https://github.com/DaniloCTM) |         |
+|    2.0    |            05/01             | Adição dos códigos | [Carlos Rodrigues](https://github.com/Carlos-kadu) |         |
 
 </div>
 
