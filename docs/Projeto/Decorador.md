@@ -184,6 +184,8 @@ Foi criada uma classe decoradora que implementa funcionalidade de registro para 
 
 ## Resultados
 
+
+### Interface: WeaponBehavior
 ```kotlin
 interface WeaponBehavior {
     fun onHit(stack: ItemStack, target: LivingEntity, attacker: LivingEntity): Boolean
@@ -201,6 +203,7 @@ abstract class WeaponDecorator(private val weapon: WeaponBehavior) : WeaponBehav
 }
 ```
 
+### Classe: ChargeableWeaponDecorator
 ```kotlin
 class ChargeableWeaponDecorator(
     weapon: WeaponBehavior,
@@ -275,6 +278,8 @@ class ChargeableWeaponDecorator(
 }
 ```
 
+
+### Classe: ReinforcedCopperSword
 ```kotlin
 class ReinforcedCopperSword(
     material: ToolMaterial = ToolMaterial(
@@ -377,12 +382,13 @@ A implementação deixou o código mais compreensível, e foi um exercício inte
 
 | Versão | Data da alteração |      Alteração       |              Responsável              | Revisor | Data de revisão |
 | :----: | :---------------: | :------------------: | :-----------------------------------: | :-----: | :-------------: |
-|  1.0   |       05/01       | Criação do documento | [Thomas Q](https://github.com/thmasq) |         |                 |
+|  1.0   |       05/01       | Criação do documento | [Thomas Q](https://github.com/thmasq) |   [Patricia Silva](https://github.com/patyhelenaa)      |    06/01/2025             |
 
 </div>
 
 ## Controle de Revisão
 
-| Revisor(es) | O que foi realizado |
-| :---------: | :-----------------: |
-|             |                     |
+|                    Revisor(es)                     |                     O que foi realizado                      |
+| :------------------------------------------------: | :----------------------------------------------------------: |
+| [Patricia Silva](https://github.com/patyhelenaa)   | Adição dos links para os subtópicos e titulos para os codigos no Decorador de Armas       |
+|                                                    |                                                              |
