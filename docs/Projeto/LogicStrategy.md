@@ -15,7 +15,7 @@ O objetivo do strategy é permitir que um conjunto de algoritmos seja definido e
 ## Metodologia
 
 <div align="justify">
-No processo de desenvolvimento das portas lógicas foi notada a necessidade de uma interface simples para a função lógica utilizada por uma porta lógica, devido a sua simplicidade e genericidade entre as diferentes portas lógicas. Assim, foi criada um classe LogicStrategy, utilizada pela classe abstrata de portas lógicas para evaluar a função lógica. Implementada por cada tipo de função lógica
+No processo de desenvolvimento das portas lógicas foi notada a necessidade de uma interface simples para a função lógica utilizada por uma porta lógica, devido a sua simplicidade e genericidade entre as diferentes portas lógicas. Assim, foi criada um classe LogicStrategy e uma classe abstrata TwoInputGateStrategy, utilizada pela classe abstrata de portas lógicas -da API do próprio Minecraft- para avaliar a função lógica. Implementada por cada tipo de função lógica
 </div>
 
 ## Resultados
@@ -28,10 +28,18 @@ interface LogicStrategy {
 }
 ```
 
+### Classe abstrata TwoInputGateStrategy
+
+```kotlin
+abstract class TwoInputGateStrategy : LogicStrategy {
+    override fun getRequiredInputs(): Set<Direction> = setOf(Direction.EAST, Direction.WEST)
+}
+```
+
 ### Classe: ANDStrategy
 
 ```kotlin
-class ANDStrategy : LogicStrategy {
+class ANDStrategy : TwoInputGateStrategy() {
     override fun getOutput(inputPower: InputPower) = inputPower.east && inputPower.west
 }
 ```
@@ -39,7 +47,7 @@ class ANDStrategy : LogicStrategy {
 ### Classe: NANDStrategy
 
 ```kotlin
-class NANDStrategy : LogicStrategy {
+class NANDStrategy : TwoInputGateStrategy() {
     override fun getOutput(inputPower: InputPower) = !(inputPower.east && inputPower.west)
 }
 ```
@@ -47,7 +55,7 @@ class NANDStrategy : LogicStrategy {
 ### Classe: NORStrategy
 
 ```kotlin
-class NORStrategy : LogicStrategy {
+class NORStrategy : TwoInputGateStrategy() {
     override fun getOutput(inputPower: InputPower) = !(inputPower.east || inputPower.west)
 }
 ```
@@ -57,13 +65,14 @@ class NORStrategy : LogicStrategy {
 ```kotlin
 class NOTStrategy : LogicStrategy {
     override fun getOutput(inputPower: InputPower) = !inputPower.south
+    override fun getRequiredInputs(): Set<Direction> = setOf(Direction.SOUTH)
 }
 ```
 
 ### Classe: ORStrategy
 
 ```kotlin
-class ORStrategy : LogicStrategy {
+class ORStrategy : TwoInputGateStrategy() {
     override fun getOutput(inputPower: InputPower) = inputPower.east || inputPower.west
 }
 ```
@@ -71,7 +80,7 @@ class ORStrategy : LogicStrategy {
 ### Classe: XNORStrategy
 
 ```kotlin
-class XNORStrategy : LogicStrategy {
+class XNORStrategy : TwoInputGateStrategy() {
     override fun getOutput(inputPower: InputPower) = !(inputPower.west xor inputPower.east)
 }
 ```
@@ -79,7 +88,7 @@ class XNORStrategy : LogicStrategy {
 ### Classe: XORStrategy
 
 ```kotlin
-class XORStrategy : LogicStrategy {
+class XORStrategy : TwoInputGateStrategy() {
     override fun getOutput(inputPower: InputPower) = inputPower.east xor inputPower.west
 }
 ```
@@ -121,15 +130,20 @@ abstract class AbstractLogicGate(settings: Settings, val logicStrategy: LogicStr
 
     /**
      * Checks if the gate is powered based on the input from its neighbors. The logic function
-     * passed to the gate is used to determine if the gate should be powered or not.
+     * passed to the gate is used to determine if the gate should be powered or not. Defaults to false if state is undefined.
      *
      * @param world The current world instance.
      * @param pos The position of the block in the world.
      * @param state The current block state.
      * @return Boolean indicating whether the gate is powered.
      */
-    override fun hasPower(world: World, pos: BlockPos, state: BlockState) = logicStrategy.getOutput(getInputPower(world, pos, state))
-
+    override fun hasPower(world: World, pos: BlockPos, state: BlockState): Boolean {
+        return try {
+            logicStrategy.getOutput(getInputPower(world, pos, state))
+        } catch (e: Exception) {
+            false
+        }
+    }
 
     override fun appendProperties(builder: StateManager.Builder<Block, BlockState>) {
         builder.add(FACING, POWERED)
@@ -161,12 +175,22 @@ abstract class AbstractLogicGate(settings: Settings, val logicStrategy: LogicStr
      * @param world The world instance.
      * @param pos The position of the current block.
      * @param direction The direction to check for power (east, west, south, etc.).
-     * @return Boolean indicating if the neighbor block is emitting redstone power.
+     * @return Boolean indicating if the neighbor block is emitting redstone power. Defaults to false if state is undefined.
      */
     private fun hasPowerFromNeighbor(world: World, pos: BlockPos, direction: Direction): Boolean {
         val neighborPos = pos.offset(direction)
-        val power = world.getEmittedRedstonePower(neighborPos, direction)
-        return power > 0
+        return try {
+            val power = world.getEmittedRedstonePower(neighborPos, direction)
+            power > 0
+        } catch (e: Exception) {
+            false
+        }
+    }
+
+    override fun canPlaceAt(state: BlockState, world: WorldView, pos: BlockPos): Boolean {
+        val belowBlockPos = pos.down()
+        val blockBelow = world.getBlockState(belowBlockPos)
+        return blockBelow.isSolidBlock(world, belowBlockPos)
     }
 }
 ```
@@ -231,9 +255,10 @@ A aplicação do padrão Strategy na implementação da lógica booleana minera�
 
 <div style="margin: 0 auto; width: fit-content;">
 
-| Versão | Data da alteração |      Alteração       |                         Responsável                          | Revisor | Data de revisão |
-| :----: | :---------------: | :------------------: | :----------------------------------------------------------: | :-----: | :-------------: |
-|  1.0   |       05/01       | Criação do documento | [André Emanuel Bispo da Silva](https://github.com/Hunter104) |         |                 |
+| Versão | Data da alteração |            Alteração             |                         Responsável                          | Revisor | Data de revisão |
+| :----: | :---------------: | :------------------------------: | :----------------------------------------------------------: | :-----: | :-------------: |
+|  1.0   |       05/01       |       Criação do documento       | [André Emanuel Bispo da Silva](https://github.com/Hunter104) |         |                 |
+|  1.1   |       05/05       | Altera snippets após refatoração |  [Thomas Queiroz Souza Alves](https://github.com/Hunter104)  |         |                 |
 
 </div>
 
