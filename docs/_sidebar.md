@@ -56,7 +56,7 @@
         - [Participantes](Projeto/BridgeMaterial.md#participantes)
         - [Histórico de Versão](Projeto/BridgeMaterial.md#histórico-de-versão)
       - [3.2.2 Decorador](Projeto/Decorador.md)
-      - [3.2.2 Composite](Projeto/Composite-BookGuide.md)
+      - [3.2.3 Composite](Projeto/Composite-BookGuide.md)
     - [3.3. Padrões de Projeto GoFs Comportamentais](Projeto/GoFsComportamentais.md)
       - [3.3.1 Strategy - Item](Projeto/StrategyRegister.md)
         - [Objetivo](Projeto/StrategyRegister.md#objetivo)

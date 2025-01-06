@@ -26,11 +26,47 @@
 
 Logic Thinkering é um mod para Minecraft que possui o objetivo de introduzir mecânicas simples e fáceis de aprender para aprimorar o uso da redstone no jogo.
 
+Link para o código fonte: [Logic Thinkering](https://github.com/i-JSS/Logic-Thinkering)
+
 [//]: # (Contextualize, usando referências, links, e outros materiais como fontes.)
 
 ## Screenshots da Terceira Entrega
 
-Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
+#### GoFs Criacionais
+
+<center>
+
+![v2](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/prototypev2.png)
+
+![Modelagem - Factory Method](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/factorymethod.png)
+
+![Modelagem - Decorador](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/decorador.png)
+
+![Modelagem - Builder](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/BookGuide.png)
+
+</center>
+
+#### GoFs Estruturais
+
+<center>
+
+![v2](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/bridgeMaterial.png)
+
+![Modelagem - Builder](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/CompositeBookGuide.png)
+
+</center>
+
+#### GoFs Comportamentais
+
+<center>
+
+![v2](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/strategyregisterv3.png)
+
+![Diagrama de Classes - Estratégia de Mineração](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/miningstrategy.png)
+
+![Diagrama de Classes - Estratégia de Lógica](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/strategy_logica.png)
+
+</center>
 
 ## Há algo a ser executado?
 
