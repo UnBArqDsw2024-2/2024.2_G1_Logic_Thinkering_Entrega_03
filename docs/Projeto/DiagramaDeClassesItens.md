@@ -61,6 +61,14 @@ Após a inserção de cada padrão de projeto no diagrama original, foi gerado u
 - **APRESENTE AS VERSÕES DO DIAGRAMA!! Podem usar o formato abaixo para poluir menos a página**
 -->
 
+<center>
+Figura 1 - Factory Method
+
+![Modelagem - Factory Method](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_03/refs/heads/main/assets/classitem.png)
+
+ <b>Fonte:</b> Sandes, Lemos, Carvalho, 2025.
+</center>
+
 <div align="justify">&emsp;&emsp;
 COLOCAR O TEXTO AQUI DENTRO
 </div>
@@ -176,7 +184,7 @@ Primeira adaptação ao Bizagi pode ser vista na Figura 3.
 
 | Versão | Data da alteração |      Alteração       |                                                                        Responsável                                                                         | Revisor | Data de revisão |
 | :----: | :---------------: | :------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: | :-------------: |
-|  1.0   |       05/01       | Criação do documento | [Eduardo Sandes](https://github.com/DiceRunner714), [Gabriela Lemos](https://github.com/heylisten64), [João Antonio G. Carvalho](https://github.com/i-JSS) |         |                 |
+|  1.0   |       05/01/2025       | Criação do documento | [Eduardo Sandes](https://github.com/DiceRunner714), [Gabriela Lemos](https://github.com/heylisten64), [João Antonio G. Carvalho](https://github.com/i-JSS) |         |                 |
 |        |                   |                      |                                                                                                                                                            |         |                 |
 
 </div>
