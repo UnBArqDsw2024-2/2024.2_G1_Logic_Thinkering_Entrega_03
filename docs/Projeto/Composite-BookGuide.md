@@ -45,6 +45,8 @@ Implementar a interface Component, gerenciando uma coleção de filhos. Operaç�
 Interagir com os objetos Component:
 A interação com a estrutura ocorre por meio da interface comum, sem distinção entre folhas e compositores.
 
+O desenvolvimento do diagrama pode ser observado na seguinte gravação: https://youtu.be/9GSyYbFbf60
+
 
 ## Resultados
 

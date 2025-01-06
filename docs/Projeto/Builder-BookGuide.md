@@ -9,6 +9,7 @@
 ## Metodologia
   Durante a implementação do GuideBook, enfrentamos vários desafios devido à nossa falta de experiência com desenvolvimento de mods para o Minecraft e também com a linguagem Java. A maioria do código foi feito em conjunto pelo Discord, mas inicialmente também trabalhamos individualmente para tentar superar as dificuldades iniciais (divisão e conquista). 
   Para a criação do diagrama, seguimos as videoaulas da professora e nos reunimos no discord, afim de realizar o trabalho em conjunto.
+O desenvolvimento do diagrama pode ser observado na seguinte gravação: https://youtu.be/mISrllNT7d8
 
 ## Resultados
 
