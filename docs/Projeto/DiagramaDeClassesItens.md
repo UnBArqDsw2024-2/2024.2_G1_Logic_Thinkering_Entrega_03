@@ -70,6 +70,62 @@ Figura 1 - Diagrama de Classes dos itens
 </center>
 
 
+
+### Versões Anteriores
+
+<details>
+<summary>Visualizar versão 1.1</summary>
+
+### Versão 1.1
+
+A Figura 2 e 3 apresenta o Diagrama de Classes dos itens comuns e complexos respectivamente.
+
+<center><b>Figura 2 -</b> Diagrama de Classes de Itens comuns</center>
+
+![](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_02/refs/heads/main/assets/diagramaClasse/DCv2.1.png)
+
+<center><b>Fonte:</b> Lemos, Sandes, Carvalho, 2024.</center>
+
+<br>
+
+<center><b>Figura 3 -</b> Diagrama de Classes de Itens complexos</center>
+
+![](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_02/refs/heads/main/assets/diagramaClasse/DCv2.0.png)
+
+<center><b>Fonte:</b> Alves, 2024.</center>
+
+</details>
+
+<details>
+<summary>Visualizar versão 1.0</summary>
+
+### Versão 1.0
+
+Primeiro rascunho do Diagrama de Classes pode ser vista na Figura 4.
+
+<center><b>Figura 4 -</b> Diagrama de Classes versão 1.0</center>
+
+![](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_02/refs/heads/main/assets/diagramaClasse/DCv1.0.png)
+
+<center><b>Fonte:</b> Silva, Bartz, Sandes, Lemos, Carvalho, Santos, Alves, 2024.</center>
+
+</details>
+
+<details>
+<summary>Visualizar versão 2.0</summary>
+
+### Versão 2.0
+
+Diagrama de Classes abrangendo grande parte do que irá ser produzido.
+
+<center><b>Figura 5 -</b> Diagrama de Classes versão 2.0</center>
+
+![](https://raw.githubusercontent.com/UnBArqDsw2024-2/2024.2_G1_Logic_Thinkering_Entrega_02/refs/heads/main/assets/diagramaClasse/DCv3.0.png)
+
+<center><b>Fonte:</b> Lemos, Alves, Silva, Carvalho, Sandes, Santos, 2024.</center>
+
+
+</details>
 <!--
 -   **Resuma os pontos principais do trabalho.**
 -   **Avalie se os objetivos foram alcançados e o impacto do trabalho.**
@@ -139,5 +195,5 @@ Figura 1 - Diagrama de Classes dos itens
 
 | Revisor(es) | O que foi realizado |
 | :---------: | :-----------------: |
-|             |                     |
+| [Vinicius de Oliveira Santos](https://github.com/ViniciussdeOliveira) | Adicionado o histórico de versão do diagrama de classe |
 |             |                     |
